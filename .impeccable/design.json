@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T05:43:46.699701+00:00",
+  "title": "Design System: Зимний сад",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Ботанический зелёный",
+        "canonical": "#286548",
+        "tonalRamp": [
+          "oklch(15% 0.0796 160.09)",
+          "oklch(26% 0.0796 160.09)",
+          "oklch(38% 0.0796 160.09)",
+          "oklch(49% 0.0796 160.09)",
+          "oklch(61% 0.0796 160.09)",
+          "oklch(72% 0.0796 160.09)",
+          "oklch(84% 0.0796 160.09)",
+          "oklch(95% 0.0796 160.09)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Зелёный при наведении",
+        "canonical": "#1d5138",
+        "tonalRamp": [
+          "oklch(15% 0.0704 159.55)",
+          "oklch(26% 0.0704 159.55)",
+          "oklch(38% 0.0704 159.55)",
+          "oklch(49% 0.0704 159.55)",
+          "oklch(61% 0.0704 159.55)",
+          "oklch(72% 0.0704 159.55)",
+          "oklch(84% 0.0704 159.55)",
+          "oklch(95% 0.0704 159.55)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Тёмная листва",
+        "canonical": "#26382e",
+        "tonalRamp": [
+          "oklch(15% 0.0294 159.85)",
+          "oklch(26% 0.0294 159.85)",
+          "oklch(38% 0.0294 159.85)",
+          "oklch(49% 0.0294 159.85)",
+          "oklch(61% 0.0294 159.85)",
+          "oklch(72% 0.0294 159.85)",
+          "oklch(84% 0.0294 159.85)",
+          "oklch(95% 0.0294 159.85)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Серый шалфей",
+        "canonical": "#647168",
+        "tonalRamp": [
+          "oklch(15% 0.0209 155.41)",
+          "oklch(26% 0.0209 155.41)",
+          "oklch(38% 0.0209 155.41)",
+          "oklch(49% 0.0209 155.41)",
+          "oklch(61% 0.0209 155.41)",
+          "oklch(72% 0.0209 155.41)",
+          "oklch(84% 0.0209 155.41)",
+          "oklch(95% 0.0209 155.41)"
+        ]
+      },
+      "label": {
+        "role": "neutral",
+        "displayName": "Приглушённая листва",
+        "canonical": "#5e7055",
+        "tonalRamp": [
+          "oklch(15% 0.0466 135.30)",
+          "oklch(26% 0.0466 135.30)",
+          "oklch(38% 0.0466 135.30)",
+          "oklch(49% 0.0466 135.30)",
+          "oklch(61% 0.0466 135.30)",
+          "oklch(72% 0.0466 135.30)",
+          "oklch(84% 0.0466 135.30)",
+          "oklch(95% 0.0466 135.30)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Тёплый фон",
+        "canonical": "#f4f5f0",
+        "tonalRamp": [
+          "oklch(15% 0.0067 115.71)",
+          "oklch(26% 0.0067 115.71)",
+          "oklch(38% 0.0067 115.71)",
+          "oklch(49% 0.0067 115.71)",
+          "oklch(61% 0.0067 115.71)",
+          "oklch(72% 0.0067 115.71)",
+          "oklch(84% 0.0067 115.71)",
+          "oklch(95% 0.0067 115.71)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Белая бумага",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Светлая панель",
+        "canonical": "#fcfdf9",
+        "tonalRamp": [
+          "oklch(15% 0.0054 117.92)",
+          "oklch(26% 0.0054 117.92)",
+          "oklch(38% 0.0054 117.92)",
+          "oklch(49% 0.0054 117.92)",
+          "oklch(61% 0.0054 117.92)",
+          "oklch(72% 0.0054 117.92)",
+          "oklch(84% 0.0054 117.92)",
+          "oklch(95% 0.0054 117.92)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Светлый разделитель",
+        "canonical": "#e0e5dd",
+        "tonalRamp": [
+          "oklch(15% 0.0120 133.38)",
+          "oklch(26% 0.0120 133.38)",
+          "oklch(38% 0.0120 133.38)",
+          "oklch(49% 0.0120 133.38)",
+          "oklch(61% 0.0120 133.38)",
+          "oklch(72% 0.0120 133.38)",
+          "oklch(84% 0.0120 133.38)",
+          "oklch(95% 0.0120 133.38)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Зелёная подложка (CSS-токен без текущих потребителей)",
+        "canonical": "#edf3e9",
+        "tonalRamp": [
+          "oklch(15% 0.0147 132.47)",
+          "oklch(26% 0.0147 132.47)",
+          "oklch(38% 0.0147 132.47)",
+          "oklch(49% 0.0147 132.47)",
+          "oklch(61% 0.0147 132.47)",
+          "oklch(72% 0.0147 132.47)",
+          "oklch(84% 0.0147 132.47)",
+          "oklch(95% 0.0147 132.47)"
+        ]
+      },
+      "scene": {
+        "role": "neutral",
+        "displayName": "Фон сцены",
+        "canonical": "#edf0e8",
+        "tonalRamp": [
+          "oklch(15% 0.0111 123.46)",
+          "oklch(26% 0.0111 123.46)",
+          "oklch(38% 0.0111 123.46)",
+          "oklch(49% 0.0111 123.46)",
+          "oklch(61% 0.0111 123.46)",
+          "oklch(72% 0.0111 123.46)",
+          "oklch(84% 0.0111 123.46)",
+          "oklch(95% 0.0111 123.46)"
+        ]
+      },
+      "tool-selected": {
+        "role": "neutral",
+        "displayName": "Выбранный инструмент",
+        "canonical": "#e2ecdc",
+        "tonalRamp": [
+          "oklch(15% 0.0238 133.47)",
+          "oklch(26% 0.0238 133.47)",
+          "oklch(38% 0.0238 133.47)",
+          "oklch(49% 0.0238 133.47)",
+          "oklch(61% 0.0238 133.47)",
+          "oklch(72% 0.0238 133.47)",
+          "oklch(84% 0.0238 133.47)",
+          "oklch(95% 0.0238 133.47)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Поле",
+        "canonical": "#fafbf8",
+        "tonalRamp": [
+          "oklch(15% 0.0041 121.56)",
+          "oklch(26% 0.0041 121.56)",
+          "oklch(38% 0.0041 121.56)",
+          "oklch(49% 0.0041 121.56)",
+          "oklch(61% 0.0041 121.56)",
+          "oklch(72% 0.0041 121.56)",
+          "oklch(84% 0.0041 121.56)",
+          "oklch(95% 0.0041 121.56)"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Терракота",
+        "canonical": "#a14132",
+        "tonalRamp": [
+          "oklch(15% 0.1309 31.07)",
+          "oklch(26% 0.1309 31.07)",
+          "oklch(38% 0.1309 31.07)",
+          "oklch(49% 0.1309 31.07)",
+          "oklch(61% 0.1309 31.07)",
+          "oklch(72% 0.1309 31.07)",
+          "oklch(84% 0.1309 31.07)",
+          "oklch(95% 0.1309 31.07)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Контур фокуса",
+        "canonical": "#428163",
+        "tonalRamp": [
+          "oklch(15% 0.0812 161.41)",
+          "oklch(26% 0.0812 161.41)",
+          "oklch(38% 0.0812 161.41)",
+          "oklch(49% 0.0812 161.41)",
+          "oklch(61% 0.0812 161.41)",
+          "oklch(72% 0.0812 161.41)",
+          "oklch(84% 0.0812 161.41)",
+          "oklch(95% 0.0812 161.41)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Название приложения",
+        "purpose": "Название в верхней панели."
+      },
+      "body": {
+        "displayName": "Основной текст",
+        "purpose": "Базовый текст редактора."
+      },
+      "section": {
+        "displayName": "Заголовок секции",
+        "purpose": "Панели и заголовок выбранного объекта."
+      },
+      "button": {
+        "displayName": "Кнопка",
+        "purpose": "Компактные файловые и рабочие действия."
+      },
+      "label": {
+        "displayName": "Подпись",
+        "purpose": "Метки свойств и единиц."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-view",
+        "value": "0 1px 3px #253c2420",
+        "purpose": "Текущая вкладка плана или 3D."
+      },
+      {
+        "name": "scene-controls",
+        "value": "0 3px 12px #34492b14",
+        "purpose": "Навигация и действия поверх сцены."
+      },
+      {
+        "name": "catalog",
+        "value": "0 8px 24px #233b241c",
+        "purpose": "Каталог объектов."
+      },
+      {
+        "name": "help",
+        "value": "0 8px 35px #293b2720",
+        "purpose": "Панель справки."
+      },
+      {
+        "name": "message",
+        "value": "0 6px 25px #453d251a",
+        "purpose": "Сообщение."
+      },
+      {
+        "name": "drawer-right",
+        "value": "-4px 3px 20px #263c2510",
+        "purpose": "Правая выдвижная панель."
+      },
+      {
+        "name": "drawer-left",
+        "value": "4px 3px 20px #263c2510",
+        "purpose": "Левая выдвижная панель."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background 0.15s",
+        "purpose": "Переход фона кнопок; отключается при prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-max",
+        "value": "1150px"
+      },
+      {
+        "name": "properties-drawer-max",
+        "value": "980px"
+      },
+      {
+        "name": "tools-drawer-max",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Основная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Файловое сохранение с акцентным фоном.",
+      "html": "<button class=\"ds-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4\"/></svg>Сохранить</button>",
+      "css": ".ds-primary{font-family:\"Manrope Variable\",sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:7px;border:0;border-radius:var(--radius,7px);background:var(--green,#286548);color:white;padding:10px 15px;font-size:11px;font-weight:600;transition:background .15s}.ds-primary:hover{background:#1d5138}.ds-primary:focus-visible{outline:2px solid #428163;outline-offset:2px}.ds-primary:disabled{opacity:.35;cursor:default}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Ghost-кнопка",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Вторичное действие в рабочей панели.",
+      "html": "<button class=\"ds-ghost\">Открыть</button>",
+      "css": ".ds-ghost{font-family:\"Manrope Variable\",sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;border-radius:var(--radius,7px);min-height:32px;padding:7px 9px;color:#26382e;font-size:11px;font-weight:600;transition:background .15s}.ds-ghost:hover{background:#edf2e9}.ds-ghost:focus-visible{outline:2px solid #428163;outline-offset:2px}.ds-ghost:disabled{opacity:.35;cursor:default}@media(prefers-reduced-motion:reduce){.ds-ghost{transition:none}}"
+    },
+    {
+      "name": "Числовое поле",
+      "kind": "input",
+      "refersTo": "field-number",
+      "description": "Компактный размер с единицей измерения справа.",
+      "html": "<label class=\"ds-field\"><span>Ширина</span><span class=\"ds-number\"><input type=\"number\" value=\"12\" step=\"0.1\" aria-label=\"Ширина\"><small>м</small></span></label>",
+      "css": ".ds-field{font-family:\"Manrope Variable\",sans-serif;display:block;font-size:10px;color:#5e7055}.ds-field>span:first-child{display:block;margin-bottom:6px}.ds-number{display:block;position:relative}.ds-number input{box-sizing:border-box;width:100%;height:35px;border:1px solid var(--line,#e0e5dd);border-radius:var(--radius,7px);background:#fafbf8;color:#35472d;padding:7px 33px 7px 10px;font-family:inherit;font-size:11px;font-variant-numeric:tabular-nums;caret-color:var(--green,#286548);appearance:textfield}.ds-number input::-webkit-inner-spin-button{appearance:none}.ds-number small{position:absolute;right:8px;top:11px;font-size:9px;pointer-events:none}.ds-number input:focus{border-color:#689576;background:white}.ds-number input:focus-visible{outline:2px solid #428163;outline-offset:2px}.ds-number input:disabled{color:#879086;background:#f1f3ed}"
+    },
+    {
+      "name": "Выбранный инструмент",
+      "kind": "nav",
+      "refersTo": "tool-selected",
+      "description": "Строка активного инструмента с клавишей справа.",
+      "html": "<button class=\"ds-tool\" aria-pressed=\"true\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m4 4 7.07 17 2.51-7.39L21 11.07 4 4z\"/></svg>Выбрать<kbd>V</kbd></button>",
+      "css": ".ds-tool{font-family:\"Manrope Variable\",sans-serif;cursor:pointer;display:flex;align-items:center;gap:10px;width:100%;height:34px;padding:0 10px;border:0;border-radius:var(--radius,7px);background:#e2ecdc;color:#214e31;font-size:12px;font-weight:700;text-align:left}.ds-tool svg{color:var(--green,#286548)}.ds-tool kbd{font-family:inherit;color:#5e7055;font-size:10px;border:1px solid #dce2d5;border-radius:3px;padding:0 4px;margin-left:auto;line-height:17px}.ds-tool:hover{background:#edf2e9}.ds-tool:focus-visible{outline:2px solid #428163;outline-offset:2px}"
+    },
+    {
+      "name": "Переключатель вида",
+      "kind": "nav",
+      "refersTo": "view-switch",
+      "description": "План и 3D с белой текущей вкладкой.",
+      "html": "<nav class=\"ds-switch\" aria-label=\"Вид\"><button class=\"ds-current\" aria-current=\"true\">План</button><button>3D</button></nav>",
+      "css": ".ds-switch{display:inline-flex;gap:2px;padding:3px;background:#e9ede4;border-radius:7px}.ds-switch button{font-family:\"Manrope Variable\",sans-serif;cursor:pointer;border:0;padding:6px 13px;border-radius:5px;background:none;font-size:11px;font-weight:650;color:#5e7055}.ds-switch button.ds-current{background:white;color:#2d4930;box-shadow:0 1px 3px #253c2420}.ds-switch button:hover{background:#edf2e9}.ds-switch button:focus-visible{outline:2px solid #428163;outline-offset:2px}"
+    },
+    {
+      "name": "Счётчик объектов",
+      "kind": "chip",
+      "refersTo": "object-count",
+      "description": "Информационная метка в заголовке дерева.",
+      "html": "<span class=\"ds-count\">24</span>",
+      "css": ".ds-count{font-family:\"Manrope Variable\",sans-serif;background:#e9eee3;color:#617153;border-radius:5px;padding:2px 6px;font-size:9px;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Панель справки",
+      "kind": "card",
+      "refersTo": "help-container",
+      "description": "Временная поверхность с пояснением рабочих действий.",
+      "html": "<section class=\"ds-help\"><header><h3>От плана к пространству</h3><button aria-label=\"Закрыть справку\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m18 6-12 12M6 6l12 12\"/></svg></button></header><p>Выберите «Площадка» или «Стена», поставьте точки на плане и нажмите Enter.</p></section>",
+      "css": ".ds-help{box-sizing:border-box;font-family:\"Manrope Variable\",sans-serif;color:#26382e;width:370px;max-width:100%;padding:23px;border:1px solid var(--line,#e0e5dd);border-radius:12px;background:var(--paper,#fff);box-shadow:0 8px 35px #293b2720}.ds-help header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.ds-help h3{margin:0;font-size:14px}.ds-help p{font-size:11px;color:#66765b;line-height:1.9;margin:12px 0}.ds-help button{font-family:\"Manrope Variable\",sans-serif;cursor:pointer;border:0;background:none;color:inherit;padding:2px;font-size:18px}.ds-help button:hover{background:#edf2e9}.ds-help button:focus-visible{outline:2px solid #428163;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Спокойная рабочая поверхность",
+    "overview": "Режим Operate. Спокойная светлая рабочая поверхность для длительной работы со схемой, тёплый белый фон панелей, приглушённый зелёный для выбранных инструментов. Центральная сцена — главный объект внимания, без декоративных блоков и маркетинговых секций.\n\nПлотные инструменты и свойства остаются рядом с моделью. Тональные различия и тонкие разделители обозначают области работы, а иконки Lucide поддерживают единый характер интерфейса. Manrope хранится локально; внешних изображений, шрифтов и CDN нет.",
+    "keyCharacteristics": [
+      "Светлые поверхности и приглушённый ботанический акцент.",
+      "Большая центральная сцена с компактными боковыми панелями.",
+      "Один локальный шрифт, табличные цифры и последовательные иконки."
+    ],
+    "rules": [],
+    "dos": [
+      "Do сохранять центральную сцену главным объектом внимания.",
+      "Do использовать зелёный акцент для основных действий и состояния выбора.",
+      "Do сохранять видимую клавиатурную рамку фокуса и табличные цифры в размерах.",
+      "Do открывать свойства и инструменты в боковых выдвижных панелях на установленных порогах."
+    ],
+    "donts": [
+      "Don't добавлять декоративные блоки и маркетинговые секции в рабочую область.",
+      "Don't подключать внешние шрифты, изображения или CDN.",
+      "Don't превращать основные боковые панели в приподнятые карточки: они разделяются линиями."
+    ]
+  }
+}

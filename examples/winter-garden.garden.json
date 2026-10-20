@@ -1,0 +1,3606 @@
+{
+  "version": 1,
+  "name": "Зимний сад ЮФУ",
+  "entities": [
+    {
+      "id": "3f3f732a-8ff7-4be1-9e29-b8ac3112dabd",
+      "type": "floor",
+      "name": "Основная площадка",
+      "color": "#c8d6b5",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -15,
+          "y": -6
+        },
+        {
+          "x": 15,
+          "y": -6
+        },
+        {
+          "x": 15,
+          "y": 6
+        },
+        {
+          "x": -15,
+          "y": 6
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "c431a31c-56a6-4055-8f9d-6b91b0b7130a",
+      "type": "floor",
+      "name": "Передняя площадка",
+      "color": "#c8d6b5",
+      "position": {
+        "x": 0,
+        "y": 9.25,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -15,
+          "y": -3.25
+        },
+        {
+          "x": 15,
+          "y": -3.25
+        },
+        {
+          "x": 15,
+          "y": 3.25
+        },
+        {
+          "x": -15,
+          "y": 3.25
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "b0f39185-d79c-4744-9753-87c898aed251",
+      "type": "floor",
+      "name": "Северная зона отдыха",
+      "color": "#c8d6b5",
+      "position": {
+        "x": 0,
+        "y": -6.75,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -15,
+          "y": -0.75
+        },
+        {
+          "x": 15,
+          "y": -0.75
+        },
+        {
+          "x": 15,
+          "y": 0.75
+        },
+        {
+          "x": -15,
+          "y": 0.75
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "f8afb57a-0318-4774-8294-37d6c0fc2609",
+      "type": "floor",
+      "name": "Северная галерея",
+      "color": "#e8cda4",
+      "position": {
+        "x": 0,
+        "y": -10,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": 2.5
+        },
+        {
+          "x": -20,
+          "y": 2.5
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "184d4472-e5a9-4e86-8e3b-24e104787664",
+      "type": "floor",
+      "name": "Левая галерея",
+      "color": "#e8cda4",
+      "position": {
+        "x": -17.5,
+        "y": 2.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2.5,
+          "y": -10
+        },
+        {
+          "x": 2.5,
+          "y": -10
+        },
+        {
+          "x": 2.5,
+          "y": 10
+        },
+        {
+          "x": -2.5,
+          "y": 10
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "89d36254-e154-48f8-846c-9eab10a2fbf8",
+      "type": "floor",
+      "name": "Правая галерея",
+      "color": "#e8cda4",
+      "position": {
+        "x": 17.5,
+        "y": 2.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2.5,
+          "y": -10
+        },
+        {
+          "x": 2.5,
+          "y": -10
+        },
+        {
+          "x": 2.5,
+          "y": 10
+        },
+        {
+          "x": -2.5,
+          "y": 10
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "643fb75e-1c6d-48d9-8b53-a998e276b0a0",
+      "type": "floor",
+      "name": "Холл",
+      "color": "#d6ccbe",
+      "position": {
+        "x": 0,
+        "y": -15,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": 2.5
+        },
+        {
+          "x": -20,
+          "y": 2.5
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "2b196ae2-f892-4174-8126-f542bbb47a1a",
+      "type": "floor",
+      "name": "Боковой балкон",
+      "color": "#d8e1e4",
+      "position": {
+        "x": -17.5,
+        "y": 0,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2.5,
+          "y": -12.5
+        },
+        {
+          "x": 2.5,
+          "y": -12.5
+        },
+        {
+          "x": 2.5,
+          "y": 12.5
+        },
+        {
+          "x": -2.5,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "ce3ccddf-c413-40d2-9d39-8b21de552c4d",
+      "type": "floor",
+      "name": "Главный вход",
+      "color": "#eee3cf",
+      "position": {
+        "x": 0,
+        "y": 11.75,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -5,
+          "y": -0.75
+        },
+        {
+          "x": 5,
+          "y": -0.75
+        },
+        {
+          "x": 5,
+          "y": 0.75
+        },
+        {
+          "x": -5,
+          "y": 0.75
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "e56b3344-7895-4346-8470-95ac16dbe8ae",
+      "type": "floor",
+      "name": "Организаторы",
+      "color": "#b4d4a5",
+      "position": {
+        "x": 18,
+        "y": 9.75,
+        "z": 1.61
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2,
+          "y": -2.75
+        },
+        {
+          "x": 2,
+          "y": -2.75
+        },
+        {
+          "x": 2,
+          "y": 2.75
+        },
+        {
+          "x": -2,
+          "y": 2.75
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "6aa9f35e-7bcc-4640-a3f7-7adc632e9d03",
+      "type": "stairs",
+      "name": "Северная лестница слева",
+      "color": "#d6cfbf",
+      "position": {
+        "x": -6,
+        "y": -6,
+        "z": 0
+      },
+      "rotation": 180,
+      "hidden": false,
+      "width": 5,
+      "depth": 3,
+      "height": 1.6,
+      "steps": 8
+    },
+    {
+      "id": "554affc6-33d1-48d1-b396-4a0ccfca67fe",
+      "type": "stairs",
+      "name": "Северная лестница справа",
+      "color": "#d6cfbf",
+      "position": {
+        "x": 6,
+        "y": -6,
+        "z": 0
+      },
+      "rotation": 180,
+      "hidden": false,
+      "width": 5,
+      "depth": 3,
+      "height": 1.6,
+      "steps": 8
+    },
+    {
+      "id": "8dd2bca5-c009-4236-bbf3-3377e1df8153",
+      "type": "stairs",
+      "name": "Центральная лестница",
+      "color": "#d6cfbf",
+      "position": {
+        "x": 0,
+        "y": 9.25,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 8,
+      "depth": 3.5,
+      "height": 1.6,
+      "steps": 8
+    },
+    {
+      "id": "13e15727-fa81-43be-ace7-7ec58b5cd093",
+      "type": "stairs",
+      "name": "Боковая лестница слева",
+      "color": "#d6cfbf",
+      "position": {
+        "x": -14,
+        "y": 2.8,
+        "z": 0
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 3,
+      "depth": 2,
+      "height": 1.6,
+      "steps": 8
+    },
+    {
+      "id": "5ec8122d-f47e-4162-bf6b-6b60578677a6",
+      "type": "stairs",
+      "name": "Боковая лестница справа",
+      "color": "#d6cfbf",
+      "position": {
+        "x": 14,
+        "y": 2.8,
+        "z": 0
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 3,
+      "depth": 2,
+      "height": 1.6,
+      "steps": 8
+    },
+    {
+      "id": "ec57cdda-3a36-4672-817a-220b5abaa858",
+      "type": "cylinder",
+      "name": "Нижняя ступень подиума",
+      "color": "#bca17a",
+      "position": {
+        "x": 0,
+        "y": 2.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 4.8,
+      "depth": 4.8,
+      "height": 0.18,
+      "steps": 8
+    },
+    {
+      "id": "10f7296e-bbfc-499f-a5ff-b81686480928",
+      "type": "podium",
+      "name": "Подиум",
+      "color": "#e0c8a3",
+      "position": {
+        "x": 0,
+        "y": 2.5,
+        "z": 0.18
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 4.2,
+      "depth": 4.2,
+      "height": 0.18,
+      "steps": 8
+    },
+    {
+      "id": "88426cf4-1ac4-42c3-89fb-c07afccfaa02",
+      "type": "bed",
+      "name": "Левая круглая клумба",
+      "color": "#64804d",
+      "position": {
+        "x": -7.5,
+        "y": 2.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 4.8,
+      "depth": 4.8,
+      "height": 0.48,
+      "steps": 8
+    },
+    {
+      "id": "688d88f1-189b-4c59-8c44-ee9b7ca53ba3",
+      "type": "plant",
+      "name": "Левая клумба · пальма",
+      "color": "#376243",
+      "position": {
+        "x": -7.5,
+        "y": 2.5,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 2.1,
+      "depth": 2.1,
+      "height": 3.3,
+      "steps": 8
+    },
+    {
+      "id": "a27664a6-6b5b-4939-9f78-fc1fcbf1867e",
+      "type": "plant",
+      "name": "Левая клумба · куст 1",
+      "color": "#376243",
+      "position": {
+        "x": -6.05,
+        "y": 2.5,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "70bd85f8-93e4-4f14-8e69-dbb77897bf91",
+      "type": "plant",
+      "name": "Левая клумба · куст 2",
+      "color": "#4f7747",
+      "position": {
+        "x": -6.595939787304836,
+        "y": 3.6336556495786434,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "493f50b6-b503-4cb2-8797-83fdb6ea823d",
+      "type": "plant",
+      "name": "Левая клумба · куст 3",
+      "color": "#68874b",
+      "position": {
+        "x": -7.822655354236656,
+        "y": 3.913645472663644,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "9373bf5c-6b28-44a7-86ad-c4774a0c1b09",
+      "type": "plant",
+      "name": "Левая клумба · куст 4",
+      "color": "#2e644b",
+      "position": {
+        "x": -8.806404858458507,
+        "y": 3.1291314217204595,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "7ddfc094-38e9-4ca8-9c34-d41a788ddd54",
+      "type": "plant",
+      "name": "Левая клумба · куст 5",
+      "color": "#376243",
+      "position": {
+        "x": -8.806404858458508,
+        "y": 1.870868578279541,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "3a1b644e-8356-40a7-943a-0c934e0c0b7e",
+      "type": "plant",
+      "name": "Левая клумба · куст 6",
+      "color": "#4f7747",
+      "position": {
+        "x": -7.822655354236656,
+        "y": 1.0863545273363557,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "bfa8cff1-f8a3-4aa3-9e9d-d15de9ab20f5",
+      "type": "plant",
+      "name": "Левая клумба · куст 7",
+      "color": "#68874b",
+      "position": {
+        "x": -6.595939787304837,
+        "y": 1.3663443504213566,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "96ca2c4b-ee86-4199-88dd-9d4365487fc9",
+      "type": "bed",
+      "name": "Правая круглая клумба",
+      "color": "#64804d",
+      "position": {
+        "x": 7.5,
+        "y": 2.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 4.8,
+      "depth": 4.8,
+      "height": 0.48,
+      "steps": 8
+    },
+    {
+      "id": "27af9ea9-aaf8-4887-9b2e-013239673c1b",
+      "type": "plant",
+      "name": "Правая клумба · пальма",
+      "color": "#376243",
+      "position": {
+        "x": 7.5,
+        "y": 2.5,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 2.1,
+      "depth": 2.1,
+      "height": 3.3,
+      "steps": 8
+    },
+    {
+      "id": "8537f87a-a008-4da8-ac76-f73205691814",
+      "type": "plant",
+      "name": "Правая клумба · куст 1",
+      "color": "#376243",
+      "position": {
+        "x": 8.95,
+        "y": 2.5,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "166903a7-aec6-4638-8e44-6f34af76a808",
+      "type": "plant",
+      "name": "Правая клумба · куст 2",
+      "color": "#4f7747",
+      "position": {
+        "x": 8.404060212695164,
+        "y": 3.6336556495786434,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "3865b306-e885-4288-9e85-f6c23f92a849",
+      "type": "plant",
+      "name": "Правая клумба · куст 3",
+      "color": "#68874b",
+      "position": {
+        "x": 7.177344645763344,
+        "y": 3.913645472663644,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "e3839052-420b-4e0c-b632-13bf18c39516",
+      "type": "plant",
+      "name": "Правая клумба · куст 4",
+      "color": "#2e644b",
+      "position": {
+        "x": 6.1935951415414925,
+        "y": 3.1291314217204595,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "8860f473-18fc-43f6-a1c7-faa1e4894e47",
+      "type": "plant",
+      "name": "Правая клумба · куст 5",
+      "color": "#376243",
+      "position": {
+        "x": 6.1935951415414925,
+        "y": 1.870868578279541,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "6c1acc41-ac61-41be-aa33-f0b7c3484bcc",
+      "type": "plant",
+      "name": "Правая клумба · куст 6",
+      "color": "#4f7747",
+      "position": {
+        "x": 7.177344645763344,
+        "y": 1.0863545273363557,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "ee14708c-7a50-40cb-8c5b-fa1c2e2b4691",
+      "type": "plant",
+      "name": "Правая клумба · куст 7",
+      "color": "#68874b",
+      "position": {
+        "x": 8.404060212695164,
+        "y": 1.3663443504213566,
+        "z": 0.48
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.95,
+      "depth": 0.95,
+      "height": 1.1,
+      "steps": 8
+    },
+    {
+      "id": "faafcb37-c421-42d4-96e2-77a745242a54",
+      "type": "floor",
+      "name": "Левая зелёная зона",
+      "color": "#73905b",
+      "position": {
+        "x": -11,
+        "y": 9.45,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -4,
+          "y": -3.049999999999999
+        },
+        {
+          "x": -2.8000000000000007,
+          "y": -2.8499999999999996
+        },
+        {
+          "x": -0.5999999999999996,
+          "y": -2.049999999999999
+        },
+        {
+          "x": 1.3000000000000007,
+          "y": -0.75
+        },
+        {
+          "x": 2.8000000000000007,
+          "y": 0.8500000000000014
+        },
+        {
+          "x": 4,
+          "y": 3.0500000000000007
+        },
+        {
+          "x": -4,
+          "y": 3.0500000000000007
+        }
+      ],
+      "thickness": 0.22
+    },
+    {
+      "id": "94277677-f7ca-4cef-bd6e-bff770011b83",
+      "type": "floor",
+      "name": "Правая зелёная зона",
+      "color": "#73905b",
+      "position": {
+        "x": 11,
+        "y": 9.45,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 4,
+          "y": 3.0500000000000007
+        },
+        {
+          "x": -4,
+          "y": 3.0500000000000007
+        },
+        {
+          "x": -2.8000000000000007,
+          "y": 0.8500000000000014
+        },
+        {
+          "x": -1.3000000000000007,
+          "y": -0.75
+        },
+        {
+          "x": 0.5999999999999996,
+          "y": -2.049999999999999
+        },
+        {
+          "x": 2.8000000000000007,
+          "y": -2.8499999999999996
+        },
+        {
+          "x": 4,
+          "y": -3.049999999999999
+        }
+      ],
+      "thickness": 0.22
+    },
+    {
+      "id": "8901f441-37be-48a4-b6a5-6ac341a6f570",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 1",
+      "color": "#376243",
+      "position": {
+        "x": 14.1,
+        "y": 7.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "2dbcd6b2-620f-4880-89ef-47164ba174b7",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 2",
+      "color": "#4f7747",
+      "position": {
+        "x": 12.5,
+        "y": 7.8,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "68fa1791-8f72-433e-928f-458d97f847cb",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 3",
+      "color": "#68874b",
+      "position": {
+        "x": 14,
+        "y": 9,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "cf1d83c4-849d-4659-8efc-46a7bac4bc3e",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 4",
+      "color": "#2e644b",
+      "position": {
+        "x": 12.4,
+        "y": 9.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "ad4c77c3-59b9-459d-bf39-4c09e56ed18c",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 5",
+      "color": "#376243",
+      "position": {
+        "x": 10.8,
+        "y": 9.7,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "f98c0277-3507-4820-8dee-c3bd3dfa3b2e",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 6",
+      "color": "#4f7747",
+      "position": {
+        "x": 14,
+        "y": 11.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "9f35c893-0cc8-4187-bcba-05af7b0f7bd6",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 7",
+      "color": "#68874b",
+      "position": {
+        "x": 12.4,
+        "y": 11.5,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "7c43b2b9-7b50-4220-960c-6ccd2467949a",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 8",
+      "color": "#2e644b",
+      "position": {
+        "x": 10.7,
+        "y": 11.5,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "859d8a18-c991-4a9d-9b37-644fb1df32ed",
+      "type": "plant",
+      "name": "Правая зелёная зона · растение 9",
+      "color": "#376243",
+      "position": {
+        "x": 9,
+        "y": 11.7,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "daa7e994-84cc-4cd9-886d-e2f0b20b3c64",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 1",
+      "color": "#376243",
+      "position": {
+        "x": -14.1,
+        "y": 7.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "692db1fa-032a-4cb4-853c-b45ec6497f8c",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 2",
+      "color": "#4f7747",
+      "position": {
+        "x": -12.5,
+        "y": 7.8,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "e884c9e4-0760-42b3-bca9-cc810ff12329",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 3",
+      "color": "#68874b",
+      "position": {
+        "x": -14,
+        "y": 9,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "6d017431-ad84-4469-95db-e1a6ae847524",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 4",
+      "color": "#2e644b",
+      "position": {
+        "x": -12.4,
+        "y": 9.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "b7a43238-0ed2-4bb4-94da-85afae3da7b9",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 5",
+      "color": "#376243",
+      "position": {
+        "x": -10.8,
+        "y": 9.7,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "c2ab6dc1-d892-4495-8103-6cabd598871e",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 6",
+      "color": "#4f7747",
+      "position": {
+        "x": -14,
+        "y": 11.4,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "4e86caa8-d1f4-4e72-91ad-b37a490e62a3",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 7",
+      "color": "#68874b",
+      "position": {
+        "x": -12.4,
+        "y": 11.5,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.25,
+      "steps": 8
+    },
+    {
+      "id": "5ff39719-dd9f-4a10-abdc-51886da5d414",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 8",
+      "color": "#2e644b",
+      "position": {
+        "x": -10.7,
+        "y": 11.5,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "63f51368-61f9-4d0e-8250-871dfb1856a0",
+      "type": "plant",
+      "name": "Левая зелёная зона · растение 9",
+      "color": "#376243",
+      "position": {
+        "x": -9,
+        "y": 11.7,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 2.55,
+      "steps": 8
+    },
+    {
+      "id": "90c2e070-3d6f-4a74-bdf3-108029577a67",
+      "type": "box",
+      "name": "Левое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": -14.35,
+        "y": -4.6,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 4.8,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "027a65c7-2b18-4a14-9d58-aaeb3bc57fc6",
+      "type": "plant",
+      "name": "Левое озеленение · -4.6 · 1",
+      "color": "#376243",
+      "position": {
+        "x": -14.35,
+        "y": -6.4,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "1abc5549-6285-46d1-8136-838a78f12e3a",
+      "type": "plant",
+      "name": "Левое озеленение · -4.6 · 2",
+      "color": "#4f7747",
+      "position": {
+        "x": -14.35,
+        "y": -5.2,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "d47bd750-9aa7-40d7-9340-e2c5660c0703",
+      "type": "plant",
+      "name": "Левое озеленение · -4.6 · 3",
+      "color": "#68874b",
+      "position": {
+        "x": -14.35,
+        "y": -4,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "88bb6a54-86d6-4b50-a0da-4259a42acb26",
+      "type": "plant",
+      "name": "Левое озеленение · -4.6 · 4",
+      "color": "#2e644b",
+      "position": {
+        "x": -14.35,
+        "y": -2.8,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "5d740194-6704-496e-8e2d-f39cb4887459",
+      "type": "box",
+      "name": "Левое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": -14.35,
+        "y": -0.35,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 1.5,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "404f6686-2fd5-46c0-b25e-9873554fc32d",
+      "type": "plant",
+      "name": "Левое озеленение · -0.35 · 1",
+      "color": "#376243",
+      "position": {
+        "x": -14.35,
+        "y": -0.3500000000000001,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "abccd9dd-7a9f-4ca1-9966-cd9880cf6849",
+      "type": "box",
+      "name": "Левое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": -14.35,
+        "y": 5.15,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 1.6,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "8d9b4612-1886-4fdb-b49f-41d25ec6a781",
+      "type": "plant",
+      "name": "Левое озеленение · 5.15 · 1",
+      "color": "#376243",
+      "position": {
+        "x": -14.35,
+        "y": 5.15,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "1c9c1938-9a33-4249-a7b7-fb7fabf731b8",
+      "type": "box",
+      "name": "Правое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": 14.35,
+        "y": -4.6,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 4.8,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "e78d791d-57c4-4049-ad0d-5d98ca6f9c3b",
+      "type": "plant",
+      "name": "Правое озеленение · -4.6 · 1",
+      "color": "#376243",
+      "position": {
+        "x": 14.35,
+        "y": -6.4,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "7540e997-9ff8-4148-b826-43b7811f5111",
+      "type": "plant",
+      "name": "Правое озеленение · -4.6 · 2",
+      "color": "#4f7747",
+      "position": {
+        "x": 14.35,
+        "y": -5.2,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "611f6d3c-b510-4916-82f8-a7eee83e4911",
+      "type": "plant",
+      "name": "Правое озеленение · -4.6 · 3",
+      "color": "#68874b",
+      "position": {
+        "x": 14.35,
+        "y": -4,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "758a9d53-3a4f-4598-beb8-d234e63e26e0",
+      "type": "plant",
+      "name": "Правое озеленение · -4.6 · 4",
+      "color": "#2e644b",
+      "position": {
+        "x": 14.35,
+        "y": -2.8,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "3dadb35b-da58-4831-9924-ab9e40a0f549",
+      "type": "box",
+      "name": "Правое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": 14.35,
+        "y": -0.35,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 1.5,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "462a01cd-d6f1-43de-8013-5bb4363e5908",
+      "type": "plant",
+      "name": "Правое озеленение · -0.35 · 1",
+      "color": "#376243",
+      "position": {
+        "x": 14.35,
+        "y": -0.3500000000000001,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "6b012d73-6455-46ef-8555-76859240d796",
+      "type": "box",
+      "name": "Правое пристенное озеленение",
+      "color": "#6e8651",
+      "position": {
+        "x": 14.35,
+        "y": 5.15,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.7,
+      "depth": 1.6,
+      "height": 0.35,
+      "steps": 8
+    },
+    {
+      "id": "31dbe654-8bdd-4688-9ad2-2d1a8aff2025",
+      "type": "plant",
+      "name": "Правое озеленение · 5.15 · 1",
+      "color": "#376243",
+      "position": {
+        "x": 14.35,
+        "y": 5.15,
+        "z": 0.35
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.85,
+      "depth": 0.85,
+      "height": 1.2,
+      "steps": 8
+    },
+    {
+      "id": "b6e0e00e-5716-4fed-b293-a93037232edf",
+      "type": "column",
+      "name": "Колонна 1",
+      "color": "#9daba3",
+      "position": {
+        "x": -20,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "c0453c98-7808-460f-8e3e-b4ad8885c303",
+      "type": "column",
+      "name": "Колонна 2",
+      "color": "#9daba3",
+      "position": {
+        "x": -15,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "d1aa1497-7a7b-411d-a3ec-40b564d94619",
+      "type": "column",
+      "name": "Колонна 3",
+      "color": "#9daba3",
+      "position": {
+        "x": -8.8,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "f6caabe6-5219-41ca-8118-94223c5bd8eb",
+      "type": "column",
+      "name": "Колонна 4",
+      "color": "#9daba3",
+      "position": {
+        "x": 3.3,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "deec92cc-5bce-438e-9267-4b5b076abbde",
+      "type": "column",
+      "name": "Колонна 5",
+      "color": "#9daba3",
+      "position": {
+        "x": 8.5,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "0a426b6a-d16c-4dff-9415-be90681ac7cd",
+      "type": "column",
+      "name": "Колонна 6",
+      "color": "#9daba3",
+      "position": {
+        "x": 15,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "61b5e89e-9b15-4302-abc3-e12124f09911",
+      "type": "column",
+      "name": "Колонна 7",
+      "color": "#9daba3",
+      "position": {
+        "x": 20,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "4f6e6977-3490-4bae-aba5-cb5fbd385790",
+      "type": "column",
+      "name": "Колонна 8",
+      "color": "#9daba3",
+      "position": {
+        "x": -15,
+        "y": -2.7,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "9d6a6169-9e51-4585-981f-597b48dc9768",
+      "type": "column",
+      "name": "Колонна 9",
+      "color": "#9daba3",
+      "position": {
+        "x": 15,
+        "y": -2.7,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "c0aec7e5-8852-498d-820a-0a0d6dbbcd6e",
+      "type": "column",
+      "name": "Колонна 10",
+      "color": "#9daba3",
+      "position": {
+        "x": -20,
+        "y": -0.8,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "86462551-2fc8-4a16-b858-bb531413b46c",
+      "type": "column",
+      "name": "Колонна 11",
+      "color": "#9daba3",
+      "position": {
+        "x": -20,
+        "y": 6.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "7154dea5-92fe-4214-a6f5-302dc5937cf7",
+      "type": "column",
+      "name": "Колонна 12",
+      "color": "#9daba3",
+      "position": {
+        "x": -15,
+        "y": 6.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "ddd55707-313d-4ac9-b73b-711fe1364c6b",
+      "type": "column",
+      "name": "Колонна 13",
+      "color": "#9daba3",
+      "position": {
+        "x": 15,
+        "y": 6.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "9802f590-f512-41dd-807d-3243fd97059e",
+      "type": "column",
+      "name": "Колонна 14",
+      "color": "#9daba3",
+      "position": {
+        "x": -15,
+        "y": 12.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "a0a267a6-1390-41aa-83d4-d623ba8f07be",
+      "type": "column",
+      "name": "Колонна 15",
+      "color": "#9daba3",
+      "position": {
+        "x": 15,
+        "y": 12.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.72,
+      "depth": 0.72,
+      "height": 7.4,
+      "steps": 8
+    },
+    {
+      "id": "b079e602-cf74-4f45-a0d1-2025d238de7b",
+      "type": "wall",
+      "name": "Наружная стена холла",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 0,
+        "y": -15,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": 2.5
+        },
+        {
+          "x": -20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": -2.5
+        },
+        {
+          "x": 20,
+          "y": 2.5
+        }
+      ],
+      "thickness": 0.3,
+      "height": 4.800000000000001,
+      "segmentIds": [
+        "2f930689-550f-4831-b570-a3db6b2bb86d",
+        "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+        "70415bac-7c60-44ed-8ad1-984c941a67f0"
+      ],
+      "openings": [
+        {
+          "id": "7bc82f07-755e-465d-b54d-463cb43693c8",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 7,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        },
+        {
+          "id": "8c302a4a-4abf-404d-b324-0ee267ce9777",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 13,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        },
+        {
+          "id": "3d6c5a52-8b4e-42d8-aab2-888308011801",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 19,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        },
+        {
+          "id": "b3e268a9-4e63-492f-a43a-1ed684f42930",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 25,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        },
+        {
+          "id": "b7924f20-4658-48a9-9f73-a2780f8bf1ae",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 31,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        },
+        {
+          "id": "f3df6fc5-5d9d-453f-8023-ad093644adf9",
+          "type": "window",
+          "name": "Окно холла",
+          "segmentId": "5750dc6e-9853-4ac3-8bec-59c6e6f80114",
+          "offset": 36,
+          "width": 2,
+          "height": 1.5,
+          "sill": 2.7
+        }
+      ],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "c058ee3e-02ff-4b1f-b4be-52f6d18dcb20",
+      "type": "wall",
+      "name": "Проходы в холл",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 0,
+        "y": -12.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": 0
+        },
+        {
+          "x": 20,
+          "y": 0
+        }
+      ],
+      "thickness": 0.3,
+      "height": 4.800000000000001,
+      "segmentIds": [
+        "9c74a6cf-2e04-4434-953d-a96339881ee2"
+      ],
+      "openings": [
+        {
+          "id": "eb0a06ee-b038-4c32-8bfd-725645696c65",
+          "type": "door",
+          "name": "Западный проход",
+          "segmentId": "9c74a6cf-2e04-4434-953d-a96339881ee2",
+          "offset": 3.3999999999999986,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 1.6
+        },
+        {
+          "id": "a3a593d6-5c89-42b9-9bdd-4e92d7361bfe",
+          "type": "door",
+          "name": "Левый проход",
+          "segmentId": "9c74a6cf-2e04-4434-953d-a96339881ee2",
+          "offset": 11.9,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 1.6
+        },
+        {
+          "id": "52359073-2cd8-4ede-8011-06b8ae848619",
+          "type": "door",
+          "name": "Правый проход",
+          "segmentId": "9c74a6cf-2e04-4434-953d-a96339881ee2",
+          "offset": 26.9,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 1.6
+        },
+        {
+          "id": "c54575f2-4912-427f-b130-d10825ad472a",
+          "type": "door",
+          "name": "Восточный проход",
+          "segmentId": "9c74a6cf-2e04-4434-953d-a96339881ee2",
+          "offset": 37.4,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 1.6
+        }
+      ],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "e8a91b8e-91a4-4461-ae2e-90b8d8464b9e",
+      "type": "wall",
+      "name": "Стена между боковым балконом и галереей",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -15,
+        "y": 0,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -12.5
+        },
+        {
+          "x": 0,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.3,
+      "height": 3.2,
+      "segmentIds": [
+        "7baea5c2-9017-4014-b1ee-495430c44726"
+      ],
+      "openings": [
+        {
+          "id": "1f6285b7-7e07-4f02-b224-4e0e61a54077",
+          "type": "door",
+          "name": "Двери на боковой балкон",
+          "segmentId": "7baea5c2-9017-4014-b1ee-495430c44726",
+          "offset": 21.7,
+          "width": 2.2,
+          "height": 2.6,
+          "sill": 0
+        }
+      ]
+    },
+    {
+      "id": "97d02e39-36d7-45c3-926a-82d4381037b0",
+      "type": "wall",
+      "name": "Наружная стена бокового балкона",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -20,
+        "y": 0,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -12.5
+        },
+        {
+          "x": 0,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.3,
+      "height": 3.2,
+      "segmentIds": [
+        "cfd4b6a0-db3b-41bf-b315-b53569cb5391"
+      ],
+      "openings": [
+        {
+          "id": "49f5218e-c602-452a-ad94-387a3d20492b",
+          "type": "window",
+          "name": "Окно бокового балкона",
+          "segmentId": "cfd4b6a0-db3b-41bf-b315-b53569cb5391",
+          "offset": 1.5,
+          "width": 3,
+          "height": 1.5,
+          "sill": 1.1
+        },
+        {
+          "id": "ff594b07-d785-4166-b0cb-c47501889ef1",
+          "type": "window",
+          "name": "Окно бокового балкона",
+          "segmentId": "cfd4b6a0-db3b-41bf-b315-b53569cb5391",
+          "offset": 7,
+          "width": 3,
+          "height": 1.5,
+          "sill": 1.1
+        },
+        {
+          "id": "94ba3315-817f-491b-8087-e60aef6ad697",
+          "type": "window",
+          "name": "Окно бокового балкона",
+          "segmentId": "cfd4b6a0-db3b-41bf-b315-b53569cb5391",
+          "offset": 13,
+          "width": 3,
+          "height": 1.5,
+          "sill": 1.1
+        },
+        {
+          "id": "c6ec17f9-2a53-44c5-a198-d1bf06f737d7",
+          "type": "window",
+          "name": "Окно бокового балкона",
+          "segmentId": "cfd4b6a0-db3b-41bf-b315-b53569cb5391",
+          "offset": 19,
+          "width": 3,
+          "height": 1.5,
+          "sill": 1.1
+        }
+      ]
+    },
+    {
+      "id": "447aa83b-cfee-442f-85a1-7d75104f9b49",
+      "type": "wall",
+      "name": "Северный выход бокового балкона",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -17.5,
+        "y": -12.5,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2.5,
+          "y": 0
+        },
+        {
+          "x": 2.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.3,
+      "height": 3.2,
+      "segmentIds": [
+        "b8706777-a522-4d51-ad04-bfea973b67da"
+      ],
+      "openings": [
+        {
+          "id": "98dbf94c-72ee-4937-a2ff-97eb2788a579",
+          "type": "door",
+          "name": "Северный выход бокового балкона",
+          "segmentId": "b8706777-a522-4d51-ad04-bfea973b67da",
+          "offset": 3,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 0
+        }
+      ]
+    },
+    {
+      "id": "58270336-0f0e-4c10-bd0b-fddd76410c74",
+      "type": "wall",
+      "name": "Южный выход бокового балкона",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -17.5,
+        "y": 12.5,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2.5,
+          "y": 0
+        },
+        {
+          "x": 2.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.3,
+      "height": 3.2,
+      "segmentIds": [
+        "ba7fb7ba-279f-464c-81c1-e2520c057122"
+      ],
+      "openings": [
+        {
+          "id": "a4968cb2-aa0c-45e5-a4a6-457328f0f51f",
+          "type": "door",
+          "name": "Южный выход бокового балкона",
+          "segmentId": "ba7fb7ba-279f-464c-81c1-e2520c057122",
+          "offset": 3,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 0
+        }
+      ]
+    },
+    {
+      "id": "9717d11d-ce84-475a-a85d-3d550246a6d2",
+      "type": "wall",
+      "name": "Восточная наружная стена",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 20,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -12.5
+        },
+        {
+          "x": 0,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.3,
+      "height": 4.800000000000001,
+      "segmentIds": [
+        "ade3fabc-d7d9-4bd4-a6d8-ab4a1f068875"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "f87cdc8c-59bc-4e6e-a21d-25b2ceb88bc3",
+      "type": "wall",
+      "name": "Стена главного входа",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 0,
+        "y": 12.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": 0
+        },
+        {
+          "x": 20,
+          "y": 0
+        }
+      ],
+      "thickness": 0.3,
+      "height": 4.800000000000001,
+      "segmentIds": [
+        "f7a61c29-4b8b-44a6-bc4b-32e2f824c079"
+      ],
+      "openings": [
+        {
+          "id": "296655c5-6768-4304-8879-fc6bca19afc6",
+          "type": "door",
+          "name": "Главный вход · слева",
+          "segmentId": "f7a61c29-4b8b-44a6-bc4b-32e2f824c079",
+          "offset": 16,
+          "width": 1.7,
+          "height": 2.6,
+          "sill": 1.6
+        },
+        {
+          "id": "7cdb3ba7-6c54-4002-8cf4-f3aa9490382a",
+          "type": "door",
+          "name": "Главный вход · справа",
+          "segmentId": "f7a61c29-4b8b-44a6-bc4b-32e2f824c079",
+          "offset": 22.3,
+          "width": 1.7,
+          "height": 2.6,
+          "sill": 1.6
+        }
+      ],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "eb4b2168-15d3-449d-88c3-929598419217",
+      "type": "wall",
+      "name": "Левое ограждение галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -15,
+        "y": -3.1,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.4
+        },
+        {
+          "x": 0,
+          "y": 4.4
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "a3d63c2f-b5f3-4700-8f44-e33f180540e0"
+      ],
+      "openings": []
+    },
+    {
+      "id": "ede0ed61-6ee3-47e2-9894-f11449673e03",
+      "type": "wall",
+      "name": "Левое ограждение галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -15,
+        "y": 8.4,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.1000000000000005
+        },
+        {
+          "x": 0,
+          "y": 4.1
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "5fa74450-57f7-47ef-ad31-571153fb543b"
+      ],
+      "openings": []
+    },
+    {
+      "id": "a373969a-4b1c-4224-aa41-285ade6bb537",
+      "type": "wall",
+      "name": "Правое ограждение галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 15,
+        "y": -3.1,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.4
+        },
+        {
+          "x": 0,
+          "y": 4.4
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "369dcffa-2981-4cfe-b085-2168c79056b8"
+      ],
+      "openings": []
+    },
+    {
+      "id": "e6374cb5-cddb-4889-afb6-15419082351a",
+      "type": "wall",
+      "name": "Правое ограждение галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 15,
+        "y": 8.4,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.1000000000000005
+        },
+        {
+          "x": 0,
+          "y": 4.1
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "98cb90b8-4937-4a5b-8bd3-2c45fb0e7407"
+      ],
+      "openings": []
+    },
+    {
+      "id": "fbe923c9-c981-481d-94ad-58aefe1ccc67",
+      "type": "wall",
+      "name": "Ограждение северной галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -11.75,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -3.25,
+          "y": 0
+        },
+        {
+          "x": 3.25,
+          "y": 0
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "be22220b-8d21-4090-a2f7-78842baa3e7b"
+      ],
+      "openings": []
+    },
+    {
+      "id": "61438b1e-966d-4713-a3ed-acc911eb4d08",
+      "type": "wall",
+      "name": "Ограждение северной галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 0,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -3.5,
+          "y": 0
+        },
+        {
+          "x": 3.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "25a8082e-59e9-4c0a-b408-52c5ca61bc29"
+      ],
+      "openings": []
+    },
+    {
+      "id": "586a6f98-7905-44b8-ab2e-31855a8f537c",
+      "type": "wall",
+      "name": "Ограждение северной галереи",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 11.75,
+        "y": -7.5,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -3.25,
+          "y": 0
+        },
+        {
+          "x": 3.25,
+          "y": 0
+        }
+      ],
+      "thickness": 0.13,
+      "height": 0.38,
+      "segmentIds": [
+        "d40d7c44-5345-46bc-a742-4c28d6801758"
+      ],
+      "openings": []
+    },
+    {
+      "id": "891a4d08-3753-44e4-9259-960024306a53",
+      "type": "cylinder",
+      "name": "Боковой балкон · столик 1 · столешница",
+      "color": "#c6b8a3",
+      "position": {
+        "x": -17.5,
+        "y": -8.5,
+        "z": 5.47
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.05,
+      "depth": 1.05,
+      "height": 0.08,
+      "steps": 8
+    },
+    {
+      "id": "22389aad-e88a-45b5-a012-e075caa6878b",
+      "type": "column",
+      "name": "Боковой балкон · столик 1 · ножка",
+      "color": "#8f8c7d",
+      "position": {
+        "x": -17.5,
+        "y": -8.5,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.12,
+      "depth": 0.12,
+      "height": 0.67,
+      "steps": 8
+    },
+    {
+      "id": "7705ce74-d96c-4ef4-a00d-b71c1d5a93b8",
+      "type": "chair",
+      "name": "Боковой балкон · столик 1 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -18.4,
+        "y": -8.5,
+        "z": 4.8
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "fd8359ef-1aee-4690-8bf6-4ba9fcded31a",
+      "type": "chair",
+      "name": "Боковой балкон · столик 1 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -16.6,
+        "y": -8.5,
+        "z": 4.8
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "2271b521-41ac-422e-a511-fe613d9350bb",
+      "type": "chair",
+      "name": "Боковой балкон · столик 1 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": -9.4,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "ef2fd741-ec7e-4cb8-bd1d-21cc9f362535",
+      "type": "chair",
+      "name": "Боковой балкон · столик 1 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": -7.6,
+        "z": 4.8
+      },
+      "rotation": 180,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "2b400058-5803-4dd6-ba22-009270abba7f",
+      "type": "cylinder",
+      "name": "Боковой балкон · столик 2 · столешница",
+      "color": "#c6b8a3",
+      "position": {
+        "x": -17.5,
+        "y": -1.5,
+        "z": 5.47
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.05,
+      "depth": 1.05,
+      "height": 0.08,
+      "steps": 8
+    },
+    {
+      "id": "c1add88c-f2f8-4586-811c-cb7bba913c44",
+      "type": "column",
+      "name": "Боковой балкон · столик 2 · ножка",
+      "color": "#8f8c7d",
+      "position": {
+        "x": -17.5,
+        "y": -1.5,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.12,
+      "depth": 0.12,
+      "height": 0.67,
+      "steps": 8
+    },
+    {
+      "id": "b6a74f41-42de-4977-bd77-f23275dfd0a1",
+      "type": "chair",
+      "name": "Боковой балкон · столик 2 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -18.4,
+        "y": -1.5,
+        "z": 4.8
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "35ecf98d-2e0a-489b-9fb2-51bb0e26930e",
+      "type": "chair",
+      "name": "Боковой балкон · столик 2 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -16.6,
+        "y": -1.5,
+        "z": 4.8
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "78d628e1-c34f-4577-a492-bfad0882bfb2",
+      "type": "chair",
+      "name": "Боковой балкон · столик 2 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": -2.4,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "dd103d75-77eb-4636-a19c-6b2403253a32",
+      "type": "chair",
+      "name": "Боковой балкон · столик 2 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": -0.6,
+        "z": 4.8
+      },
+      "rotation": 180,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "a98d3329-301a-47f9-8c5b-d69ebbf25a3b",
+      "type": "cylinder",
+      "name": "Боковой балкон · столик 3 · столешница",
+      "color": "#c6b8a3",
+      "position": {
+        "x": -17.5,
+        "y": 6,
+        "z": 5.47
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.05,
+      "depth": 1.05,
+      "height": 0.08,
+      "steps": 8
+    },
+    {
+      "id": "8d1e393e-3096-4c35-9067-ce6a5735d421",
+      "type": "column",
+      "name": "Боковой балкон · столик 3 · ножка",
+      "color": "#8f8c7d",
+      "position": {
+        "x": -17.5,
+        "y": 6,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.12,
+      "depth": 0.12,
+      "height": 0.67,
+      "steps": 8
+    },
+    {
+      "id": "2b62c2bd-5c28-4157-9b4b-53b02027a6a5",
+      "type": "chair",
+      "name": "Боковой балкон · столик 3 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -18.4,
+        "y": 6,
+        "z": 4.8
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "b2596a4a-5aed-4195-84c9-4f77c67cc76a",
+      "type": "chair",
+      "name": "Боковой балкон · столик 3 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -16.6,
+        "y": 6,
+        "z": 4.8
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "d4ac0fbd-ae35-421b-81ac-f6cdc505cd83",
+      "type": "chair",
+      "name": "Боковой балкон · столик 3 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": 5.1,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "ac663e6b-3a38-4baa-8cb8-ab652922477c",
+      "type": "chair",
+      "name": "Боковой балкон · столик 3 · стул",
+      "color": "#c4b9a8",
+      "position": {
+        "x": -17.5,
+        "y": 6.9,
+        "z": 4.8
+      },
+      "rotation": 180,
+      "hidden": false,
+      "width": 0.48,
+      "depth": 0.48,
+      "height": 0.8,
+      "steps": 8
+    },
+    {
+      "id": "1782c399-1255-4b22-80ba-cac316d9aa10",
+      "type": "plant",
+      "name": "Декоративное растение 6",
+      "color": "#68874b",
+      "position": {
+        "x": -17.5,
+        "y": -5,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.9,
+      "depth": 0.9,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "ed797025-feaf-43a2-a34e-0a017bfa61f8",
+      "type": "plant",
+      "name": "Декоративное растение 7",
+      "color": "#2e644b",
+      "position": {
+        "x": -17.5,
+        "y": 9,
+        "z": 4.8
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.9,
+      "depth": 0.9,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "c32d60ca-c30a-4cca-962a-3f70ace0052c",
+      "type": "plant",
+      "name": "Декоративное растение 8",
+      "color": "#376243",
+      "position": {
+        "x": -19,
+        "y": -11.3,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.9,
+      "depth": 0.9,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "0a970ea3-ca81-4264-b19c-4211d7ce5bd0",
+      "type": "plant",
+      "name": "Декоративное растение 9",
+      "color": "#4f7747",
+      "position": {
+        "x": 19,
+        "y": -11.3,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.9,
+      "depth": 0.9,
+      "height": 1.9,
+      "steps": 8
+    },
+    {
+      "id": "197bc4d3-d291-48db-933b-698b771dbd8b",
+      "type": "box",
+      "name": "Зона кейтеринга · стойка",
+      "color": "#ded7c6",
+      "position": {
+        "x": 19.05,
+        "y": 2.2,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.9,
+      "depth": 7,
+      "height": 0.9,
+      "steps": 8
+    },
+    {
+      "id": "175eadb2-1c3c-4503-ace8-b7ac493434c3",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 1",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": -0.6,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "a5441830-ec44-4ddd-8b4d-11e00af09e39",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 2",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": 0.5000000000000001,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "041e5853-d70b-492c-994c-615116e08216",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 3",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": 1.6,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "3d7531d4-a8fb-4150-969d-4c47126ee804",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 4",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": 2.7,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "1b6de75a-2821-4ec1-80f1-76e76ab0c7b4",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 5",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": 3.8000000000000003,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "8bd3dc0c-0fba-4571-8108-ff4c1eebc3c1",
+      "type": "cylinder",
+      "name": "Кейтеринг · поднос 6",
+      "color": "#8e9b9b",
+      "position": {
+        "x": 19.05,
+        "y": 4.9,
+        "z": 2.5
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 0.42,
+      "depth": 0.42,
+      "height": 0.05,
+      "steps": 8
+    },
+    {
+      "id": "38f472bd-b148-4245-8e4b-80c20094a6b0",
+      "type": "wall",
+      "name": "Перегородка организаторов",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 16,
+        "y": 9.75,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": 2.75
+        },
+        {
+          "x": 0,
+          "y": -2.75
+        }
+      ],
+      "thickness": 0.18,
+      "height": 4.300000000000001,
+      "segmentIds": [
+        "783f5095-2a76-427a-9282-38e2fa629a69"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "66b9a493-f1d4-4cb8-8f82-ca71b86403ad",
+      "type": "wall",
+      "name": "Вход к организаторам",
+      "color": "#7d8b8d",
+      "position": {
+        "x": 18,
+        "y": 7,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -2,
+          "y": 0
+        },
+        {
+          "x": 2,
+          "y": 0
+        }
+      ],
+      "thickness": 0.18,
+      "height": 4.300000000000001,
+      "segmentIds": [
+        "34e91ea5-3b24-4ec3-8790-41f0d5e21344"
+      ],
+      "openings": [
+        {
+          "id": "a9bede86-f038-4789-906f-e12787672fb2",
+          "type": "door",
+          "name": "Дверь к организаторам",
+          "segmentId": "34e91ea5-3b24-4ec3-8790-41f0d5e21344",
+          "offset": 2.1,
+          "width": 1.2,
+          "height": 2.6,
+          "sill": 1.6
+        }
+      ],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "c50f70f9-90e4-4a29-9292-59f84ac8f1a0",
+      "type": "table",
+      "name": "Стол организаторов",
+      "color": "#cfbd95",
+      "position": {
+        "x": 18,
+        "y": 9.8,
+        "z": 1.6
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.25,
+      "depth": 2.25,
+      "height": 0.76,
+      "steps": 8
+    },
+    {
+      "id": "abddfb1b-8a91-4124-a5c4-be77b5d0aad3",
+      "type": "chair",
+      "name": "Стул организаторов",
+      "color": "#c2b491",
+      "position": {
+        "x": 17.1,
+        "y": 9.2,
+        "z": 1.6
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.85,
+      "steps": 8
+    },
+    {
+      "id": "ec7742c3-77c5-41cc-8edc-f0c557cbbf59",
+      "type": "chair",
+      "name": "Стул организаторов",
+      "color": "#c2b491",
+      "position": {
+        "x": 17.1,
+        "y": 10.4,
+        "z": 1.6
+      },
+      "rotation": -90,
+      "hidden": false,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.85,
+      "steps": 8
+    },
+    {
+      "id": "68cd59d8-85f9-4d6e-8b9a-9f662b73a5a7",
+      "type": "chair",
+      "name": "Стул организаторов",
+      "color": "#c2b491",
+      "position": {
+        "x": 18.9,
+        "y": 9.2,
+        "z": 1.6
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.85,
+      "steps": 8
+    },
+    {
+      "id": "86595226-5808-4224-9cfb-ffe645f03ac5",
+      "type": "chair",
+      "name": "Стул организаторов",
+      "color": "#c2b491",
+      "position": {
+        "x": 18.9,
+        "y": 10.4,
+        "z": 1.6
+      },
+      "rotation": 90,
+      "hidden": false,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.85,
+      "steps": 8
+    },
+    {
+      "id": "a118a2d7-88e1-4994-8aed-2706a0f321ef",
+      "type": "roof",
+      "name": "Стеклянная крыша",
+      "color": "#b2cdd0",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 9
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -20,
+          "y": -12.5
+        },
+        {
+          "x": 20,
+          "y": -12.5
+        },
+        {
+          "x": 20,
+          "y": 12.5
+        },
+        {
+          "x": -20,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.15
+    },
+    {
+      "id": "lower-perimeter:97d02e39-36d7-45c3-926a-82d4381037b0",
+      "type": "wall",
+      "name": "Наружная стена под боковым балконом",
+      "color": "#7d8b8d",
+      "position": {
+        "x": -20,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -12.5
+        },
+        {
+          "x": 0,
+          "y": 12.5
+        }
+      ],
+      "thickness": 0.3,
+      "height": 4.8,
+      "segmentIds": [
+        "lower-perimeter:97d02e39-36d7-45c3-926a-82d4381037b0:segment:0"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:150000,-75000/85000,-75000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Северная галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 11.75,
+        "y": -7.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 3.25,
+          "y": 0
+        },
+        {
+          "x": -3.25,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:150000,-75000/85000,-75000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:35000,-75000/85000,-75000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Северная галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 6,
+        "y": -7.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 2.5,
+          "y": 0
+        },
+        {
+          "x": -2.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:35000,-75000/85000,-75000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-35000,-75000/35000,-75000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Северная галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 0,
+        "y": -7.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 3.5,
+          "y": 0
+        },
+        {
+          "x": -3.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-35000,-75000/35000,-75000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-35000,-75000/-85000,-75000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Северная галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -6,
+        "y": -7.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 2.5,
+          "y": 0
+        },
+        {
+          "x": -2.5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-35000,-75000/-85000,-75000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-150000,-75000/-85000,-75000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Северная галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -11.75,
+        "y": -7.5,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 3.25,
+          "y": 0
+        },
+        {
+          "x": -3.25,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-150000,-75000/-85000,-75000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-150000,-75000/-150000,13000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Левая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -15,
+        "y": -3.0999999999999996,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.4
+        },
+        {
+          "x": 0,
+          "y": 4.4
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-150000,-75000/-150000,13000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-150000,13000/-150000,43000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Левая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -15,
+        "y": 2.8,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -1.4999999999999991
+        },
+        {
+          "x": 0,
+          "y": 1.4999999999999991
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-150000,13000/-150000,43000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-150000,125000/-150000,43000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Левая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -15,
+        "y": 8.399999999999999,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -4.1
+        },
+        {
+          "x": 0,
+          "y": 4.100000000000001
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-150000,125000/-150000,43000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:150000,125000/150000,43000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Правая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 15,
+        "y": 8.4,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": 4.1
+        },
+        {
+          "x": 0,
+          "y": -4.1
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:150000,125000/150000,43000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:150000,13000/150000,43000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Правая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 15,
+        "y": 2.8,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": 1.5000000000000009
+        },
+        {
+          "x": 0,
+          "y": -1.5000000000000009
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:150000,13000/150000,43000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:150000,-75000/150000,13000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Правая галерея",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 15,
+        "y": -3.1000000000000005,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": 4.3999999999999995
+        },
+        {
+          "x": 0,
+          "y": -4.3999999999999995
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:150000,-75000/150000,13000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-50000,110000/50000,110000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Главный вход",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 0,
+        "y": 11,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": -5,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-50000,110000/50000,110000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:50000,110000/50000,125000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Главный вход",
+      "color": "#b0b5a7",
+      "position": {
+        "x": 5,
+        "y": 11.75,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": -0.75
+        },
+        {
+          "x": 0,
+          "y": 0.75
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:50000,110000/50000,125000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "platform-infill:-50000,110000/-50000,125000:0,14500",
+      "type": "wall",
+      "name": "Стена под площадкой · Главный вход",
+      "color": "#b0b5a7",
+      "position": {
+        "x": -5,
+        "y": 11.75,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "points": [
+        {
+          "x": 0,
+          "y": 0.75
+        },
+        {
+          "x": 0,
+          "y": -0.75
+        }
+      ],
+      "thickness": 0.15,
+      "height": 1.4500000000000002,
+      "segmentIds": [
+        "platform-infill:-50000,110000/-50000,125000:0,14500:segment"
+      ],
+      "openings": [],
+      "floorGroup": "gallery"
+    },
+    {
+      "id": "north-sofa:1",
+      "type": "sofa",
+      "name": "Красный двухместный диван 1",
+      "color": "#bc2637",
+      "position": {
+        "x": -12.3,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:2",
+      "type": "sofa",
+      "name": "Красный двухместный диван 2",
+      "color": "#bc2637",
+      "position": {
+        "x": -10.1,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:3",
+      "type": "sofa",
+      "name": "Красный двухместный диван 3",
+      "color": "#bc2637",
+      "position": {
+        "x": -2,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:4",
+      "type": "sofa",
+      "name": "Красный двухместный диван 4",
+      "color": "#bc2637",
+      "position": {
+        "x": 0,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:5",
+      "type": "sofa",
+      "name": "Красный двухместный диван 5",
+      "color": "#bc2637",
+      "position": {
+        "x": 2,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:6",
+      "type": "sofa",
+      "name": "Красный двухместный диван 6",
+      "color": "#bc2637",
+      "position": {
+        "x": 10.1,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    },
+    {
+      "id": "north-sofa:7",
+      "type": "sofa",
+      "name": "Красный двухместный диван 7",
+      "color": "#bc2637",
+      "position": {
+        "x": 12.3,
+        "y": -6.85,
+        "z": 0
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 1.65,
+      "depth": 0.8,
+      "height": 0.95,
+      "steps": 8
+    }
+  ],
+  "appliedFixes": [
+    "ground-perimeter-v1",
+    "square-columns-north-sofas-v1"
+  ]
+}
