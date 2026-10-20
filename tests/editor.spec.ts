@@ -1,5 +1,151 @@
 import { test, expect, type Page } from "@playwright/test";
 const key = "winter-garden-project-v1";
+test("большая пальма заменяет растения правой зелёной зоны и редактируется", async ({
+  page,
+}) => {
+  await page.goto("/");
+  page.once("dialog", (dialog) => dialog.accept());
+  await page
+    .getByLabel("Файл проекта")
+    .setInputFiles("examples/winter-garden.garden.json");
+  await expect.poll(() => document(page)).not.toBeNull();
+  const before = await document(page);
+  expect(
+    before.entities.filter((e: { type: string }) => e.type === "palm"),
+  ).toHaveLength(1);
+  expect(
+    before.entities.filter((e: { type: string }) => e.type === "spruce"),
+  ).toHaveLength(2);
+  expect(
+    before.entities.some((e: { name: string }) =>
+      e.name.startsWith("Правая зелёная зона · растение"),
+    ),
+  ).toBe(false);
+  await expandFloors(page);
+  await page
+    .getByRole("button", {
+      name: "Правая зелёная зона · большая пальма",
+      exact: true,
+    })
+    .click();
+  await expect(page.getByLabel("Высота", { exact: true })).toHaveValue("6.5");
+  await page.getByLabel("Высота", { exact: true }).fill("7");
+  await page.getByLabel("Высота", { exact: true }).press("Enter");
+  expect(
+    (await document(page)).entities.find(
+      (e: { type: string }) => e.type === "palm",
+    ).height,
+  ).toBe(7);
+  await page.locator("canvas").click({ position: { x: 20, y: 20 } });
+  await page.keyboard.press("Control+z");
+  expect(
+    (await document(page)).entities.find(
+      (e: { type: string }) => e.type === "palm",
+    ).height,
+  ).toBe(6.5);
+  await page
+    .getByRole("button", {
+      name: "Левая зелёная зона · большая ель",
+      exact: true,
+    })
+    .click();
+  await expect(page.getByLabel("Высота", { exact: true })).toHaveValue("5");
+  await page
+    .getByRole("button", {
+      name: "Левая зелёная зона · малая ель",
+      exact: true,
+    })
+    .click();
+  await expect(page.getByLabel("Высота", { exact: true })).toHaveValue("4");
+  await page.locator("canvas").click({ position: { x: 20, y: 20 } });
+  for (let i = 0; i < 1; i++)
+    await page.getByRole("button", { name: "Приблизить", exact: true }).click();
+  await page.screenshot({ path: ".impeccable/review/right-zone-palm.png" });
+  await page.screenshot({ path: ".impeccable/review/palm-and-spruces.png" });
+  await page
+    .getByRole("button", { name: "Вид сверху (+Z)", exact: true })
+    .click();
+  await page.screenshot({
+    path: ".impeccable/review/palm-and-spruces-top.png",
+  });
+});
+test("дверь двигается вдоль стены в плане и 3D, открывание меняется и сохраняется", async ({
+  page,
+}) => {
+  await empty(page);
+  await draw(page, "Стена (W)", [
+    [-8, 0],
+    [8, 0],
+  ]);
+  await page
+    .locator(".properties-panel")
+    .getByRole("button", { name: "Дверь", exact: true })
+    .click();
+  const offset = page.getByLabel("Отступ от начала сегмента", { exact: true });
+  await offset.fill("3");
+  await offset.press("Enter");
+  const before = await document(page);
+  await page.getByRole("button", { name: "Стена", exact: true }).click();
+  const drag = async (
+    start: { x: number; y: number },
+    end: { x: number; y: number },
+    cancel = false,
+  ) => {
+    await page.mouse.move(start.x, start.y);
+    await page.mouse.down();
+    await page.mouse.move(end.x, end.y, { steps: 10 });
+    if (cancel) await page.keyboard.press("Escape");
+    await page.mouse.up();
+  };
+  await drag(await point(page, -4.5, 0), await point(page, -2.5, 0));
+  await expect(offset).toHaveValue("5");
+  expect((await document(page)).entities[0].points).toEqual(
+    before.entities[0].points,
+  );
+  await page.keyboard.press("Control+z");
+  await expect(offset).toHaveValue("3");
+  await page.keyboard.press("Control+Shift+z");
+  await expect(offset).toHaveValue("5");
+  await drag(await point(page, -2.5, 0), await point(page, -0.5, 0), true);
+  await expect(offset).toHaveValue("5");
+  await page
+    .getByRole("button", { name: "Развернуть открывание", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Сменить петли", exact: true })
+    .click();
+  expect((await document(page)).entities[0].openings[0]).toMatchObject({
+    hinge: "right",
+    swing: -1,
+  });
+  await page.screenshot({ path: ".impeccable/review/door-editing-plan.png" });
+  await page.getByRole("button", { name: "3D", exact: true }).click();
+  for (let i = 0; i < 3; i++)
+    await page.getByRole("button", { name: "Приблизить", exact: true }).click();
+  const THREE = await import("three"),
+    b = (await page.locator("canvas").boundingBox())!,
+    camera = new THREE.PerspectiveCamera(42, b.width / b.height, 0.1, 2000),
+    target = new THREE.Vector3(-2, 1, -4);
+  camera.position
+    .set(48, 46, 55)
+    .sub(target)
+    .multiplyScalar(1 / 1.2 ** 3)
+    .add(target);
+  camera.lookAt(target);
+  camera.updateMatrixWorld();
+  const screen = (x: number) => {
+    const p = new THREE.Vector3(x, 2.0775, 0.1).project(camera);
+    return {
+      x: b.x + ((p.x + 1) * b.width) / 2,
+      y: b.y + ((1 - p.y) * b.height) / 2,
+    };
+  };
+  await drag(screen(-2.5), screen(-0.5));
+  await expect(offset).toHaveValue("7");
+  await page.screenshot({ path: ".impeccable/review/door-editing-3d.png" });
+  await page.keyboard.press("Control+z");
+  await expect(offset).toHaveValue("5");
+});
 test("кубик ориентации центрирует виды по шести осям и следует за камерой", async ({
   page,
 }) => {

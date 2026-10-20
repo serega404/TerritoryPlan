@@ -13,6 +13,8 @@ import {
   toWorld,
   wallPanels,
   wallPanelFootprint,
+  doorSwing,
+  moveOpening,
   resizeBounds,
   resizeFromHandle,
   type ResizeHandle,
@@ -162,6 +164,18 @@ export class GardenScene {
   } = null;
   private suppressClick = false;
   private pendingOrientation: CameraView | null = null;
+  private openingDrag: null | {
+    original: Wall;
+    preview: Wall;
+    openingId: string;
+    axis: THREE.Vector3;
+    plane: THREE.Plane;
+    start: THREE.Vector3;
+    pointer: number;
+    previewRoot: THREE.Group | null;
+    error: string;
+    changed: boolean;
+  } = null;
   private savedPlan = {
     position: new THREE.Vector3(0, 100, 0),
     target: new THREE.Vector3(0, 0, 0),
@@ -304,6 +318,14 @@ export class GardenScene {
   update(state: SceneState) {
     const prev = this.state;
     if (
+      this.openingDrag &&
+      (prev?.project !== state.project ||
+        state.selected !== this.openingDrag.openingId ||
+        prev?.view !== state.view ||
+        prev?.tool !== state.tool)
+    )
+      this.finishOpeningDrag(false);
+    if (
       this.resizeDrag &&
       (prev?.project !== state.project ||
         prev?.selected !== state.selected ||
@@ -345,7 +367,8 @@ export class GardenScene {
       state.view === "plan" ? undefined : THREE.MOUSE.ROTATE;
     this.orbit.mouseButtons.RIGHT = THREE.MOUSE.PAN;
     this.orbit.mouseButtons.MIDDLE = THREE.MOUSE.PAN;
-    if (!this.moving) this.orbit.enabled = true;
+    if (!this.moving)
+      this.orbit.enabled = !this.openingDrag && !this.resizeDrag;
     this.transform.detach();
     const e = this.selectedEntity(),
       root = e ? this.roots.get(e.id) : null;
@@ -396,6 +419,7 @@ export class GardenScene {
     }
   }
   orientCamera(view: CameraView) {
+    this.finishOpeningDrag(false);
     if (this.state?.view !== "3d") {
       this.pendingOrientation = view;
       return;
@@ -613,6 +637,30 @@ export class GardenScene {
             "#aacdd1",
             0.14,
           );
+        } else {
+          const swing = doorSwing(o);
+          this.cube(
+            frame,
+            o.offset + o.width / 2,
+            o.sill + o.height / 2,
+            0,
+            Math.max(0.01, o.width - 2 * t),
+            o.height - 0.02,
+            0.025,
+            "#aacdd1",
+            0.24,
+          );
+          // The closed glass leaf stays in the wall plane; the handle marks its latch side.
+          this.cube(
+            frame,
+            o.offset + (swing.along === 1 ? o.width * 0.85 : o.width * 0.15),
+            o.sill + Math.min(1, o.height / 2),
+            swing.side * (e.thickness / 2 + 0.025),
+            Math.min(0.12, o.width * 0.2),
+            Math.min(0.035, o.height * 0.1),
+            0.035,
+            "#688f95",
+          );
         }
         if (this.state?.view === "plan") {
           this.cube(
@@ -623,33 +671,8 @@ export class GardenScene {
             o.width,
             0.07,
             Math.max(e.thickness, 0.35),
-            o.type === "window" ? "#7fadb2" : "#c7aa7d",
+            "#7fadb2",
           );
-          if (o.type === "door") {
-            const points = Array.from({ length: 25 }, (_, i) => {
-              const a = (i * Math.PI) / 48;
-              return new THREE.Vector3(
-                o.offset + Math.cos(a) * o.width,
-                e.height + 0.09,
-                Math.sin(a) * o.width,
-              );
-            });
-            frame.add(
-              new THREE.Line(
-                new THREE.BufferGeometry().setFromPoints(points),
-                new THREE.LineBasicMaterial({ color: "#6a7069" }),
-              ),
-            );
-            frame.add(
-              new THREE.Line(
-                new THREE.BufferGeometry().setFromPoints([
-                  new THREE.Vector3(o.offset, e.height + 0.09, 0),
-                  new THREE.Vector3(o.offset, e.height + 0.09, o.width),
-                ]),
-                new THREE.LineBasicMaterial({ color: "#6a7069" }),
-              ),
-            );
-          }
         }
       }
     });
@@ -750,6 +773,141 @@ export class GardenScene {
         this.cylinder(root, 0, h * 0.42, 0, w, h * 0.84, d, "#b5b99d");
         this.cylinder(root, 0, h * 0.91, 0, w * 0.94, h * 0.18, d * 0.94, c);
         break;
+      case "palm": {
+        const trunk = new THREE.CatmullRomCurve3([
+          new THREE.Vector3(),
+          new THREE.Vector3(-w * 0.025, h * 0.25, -d * 0.035),
+          new THREE.Vector3(w * 0.02, h * 0.5, -d * 0.015),
+          new THREE.Vector3(w * 0.06, h * 0.7, d * 0.025),
+        ]);
+        root.add(
+          this.mesh(
+            new THREE.TubeGeometry(trunk, 28, Math.min(w, d) * 0.03, 10, false),
+            "#927454",
+          ),
+        );
+        for (let i = 1; i < 17; i++) {
+          const ring = this.mesh(
+            new THREE.TorusGeometry(
+              Math.min(w, d) * 0.031,
+              Math.min(w, d) * 0.003,
+              4,
+              10,
+            ),
+            "#7d6348",
+          );
+          ring.position.copy(trunk.getPoint(i / 18));
+          ring.quaternion.setFromUnitVectors(
+            new THREE.Vector3(0, 0, 1),
+            trunk.getTangent(i / 18),
+          );
+          root.add(ring);
+        }
+        // Deterministic variation keeps foliage irregular without changing it on rebuild/export.
+        for (let leaf = 0; leaf < 31; leaf++) {
+          const variation = (Math.sin(leaf * 17.31 + 4) + 1) / 2,
+            angle = leaf * 2.399963 + Math.sin(leaf * 3.7) * 0.22,
+            upright = leaf % 5 === 0,
+            reach = upright ? 0.18 + variation * 0.1 : 0.32 + variation * 0.11,
+            vertices: number[] = [],
+            indices: number[] = [],
+            centres: THREE.Vector3[] = [];
+          for (let i = 0; i <= 32; i++) {
+            const t = i / 32,
+              radius = reach * t,
+              twist = angle + Math.sin(t * Math.PI) * (variation - 0.5) * 0.5,
+              y =
+                h *
+                (0.7 +
+                  (upright ? 0.3 : 0.15 + variation * 0.1) *
+                    Math.sin(t * Math.PI * 0.8) -
+                  (upright ? 0 : 0.1 + (1 - variation) * 0.14) * t * t),
+              x = w * 0.06 + Math.cos(twist) * w * radius,
+              z = d * 0.025 + Math.sin(twist) * d * radius,
+              spread =
+                Math.sin(Math.PI * t) *
+                (i % 2 ? 0.085 : 0.018) *
+                (0.85 + variation * 0.2);
+            centres.push(new THREE.Vector3(x, y, z));
+            for (const side of [-1, 1])
+              vertices.push(
+                x - Math.sin(angle) * w * spread * side,
+                y - h * spread * 0.25,
+                z + Math.cos(angle) * d * spread * side,
+              );
+            if (i < 32) {
+              const k = i * 2;
+              indices.push(k, k + 1, k + 2, k + 1, k + 3, k + 2);
+            }
+          }
+          const geometry = new THREE.BufferGeometry();
+          geometry.setAttribute(
+            "position",
+            new THREE.Float32BufferAttribute(vertices, 3),
+          );
+          geometry.setIndex(indices);
+          geometry.computeVertexNormals();
+          const foliage = this.mesh(geometry, c);
+          foliage.material.color.offsetHSL(
+            (variation - 0.5) * 0.025,
+            0,
+            (variation - 0.5) * 0.09,
+          );
+          root.add(foliage);
+          root.add(
+            this.mesh(
+              new THREE.TubeGeometry(
+                new THREE.CatmullRomCurve3(centres),
+                24,
+                Math.min(w, d) * 0.003,
+                4,
+                false,
+              ),
+              "#77934b",
+            ),
+          );
+        }
+        break;
+      }
+      case "spruce": {
+        this.cylinder(
+          root,
+          0,
+          h * 0.4,
+          0,
+          w * 0.09,
+          h * 0.8,
+          d * 0.09,
+          "#806447",
+        );
+        for (let tier = 0; tier < 8; tier++) {
+          const geometry = new THREE.ConeGeometry(1, 1, 18, 2),
+            positions = geometry.getAttribute("position"),
+            bottom = h * (0.15 + tier * 0.092),
+            height = h * (tier === 7 ? 0.206 : 0.32),
+            radius = 0.5 * (1 - tier / 8.5);
+          for (let i = 0; i < positions.count; i++) {
+            const x = positions.getX(i),
+              z = positions.getZ(i),
+              y = positions.getY(i),
+              angle = Math.atan2(z, x),
+              variation = 0.88 + 0.1 * Math.sin(angle * 7 + tier * 1.9);
+            positions.setXYZ(
+              i,
+              x * w * radius * variation,
+              bottom +
+                (y + 0.5) * height +
+                (y < 0.4 ? Math.sin(angle * 9 + tier) * h * 0.012 : 0),
+              z * d * radius * variation,
+            );
+          }
+          geometry.computeVertexNormals();
+          const foliage = this.mesh(geometry, c);
+          foliage.material.color.offsetHSL(0, 0, tier % 2 ? 0.025 : -0.015);
+          root.add(foliage);
+        }
+        break;
+      }
       case "plant":
         this.cylinder(
           root,
@@ -935,6 +1093,107 @@ export class GardenScene {
       l.element.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`;
       l.element.style.visibility = hidden ? "hidden" : "visible";
       if (!hidden) occupied.push({ x, y, w: lw, h: lh });
+    }
+  }
+  private beginOpeningDrag(
+    event: PointerEvent,
+    wall: Wall,
+    openingId: string,
+    hit: THREE.Vector3,
+  ) {
+    const o = wall.openings.find((o) => o.id === openingId);
+    if (!o) return;
+    const index = wall.segmentIds.indexOf(o.segmentId),
+      a = toWorld(wall, wall.points[index]),
+      b = toWorld(wall, wall.points[index + 1]);
+    const axis = new THREE.Vector3(b.x - a.x, 0, b.y - a.y).normalize();
+    const normal = this.camera.getWorldDirection(new THREE.Vector3());
+    normal.addScaledVector(axis, -normal.dot(axis));
+    if (normal.lengthSq() < 1e-6) return;
+    const plane = new THREE.Plane().setFromNormalAndCoplanarPoint(
+        normal.normalize(),
+        hit,
+      ),
+      start = new THREE.Vector3();
+    this.setRay(event);
+    if (!this.ray.ray.intersectPlane(plane, start)) return;
+    this.openingDrag = {
+      original: clone(wall),
+      preview: clone(wall),
+      openingId,
+      axis,
+      plane,
+      start,
+      pointer: event.pointerId,
+      previewRoot: null,
+      error: "",
+      changed: false,
+    };
+    this.orbit.enabled = false;
+    this.renderer.domElement.setPointerCapture(event.pointerId);
+    this.renderer.domElement.style.cursor = "grabbing";
+  }
+  private moveOpeningDrag(event: PointerEvent) {
+    const d = this.openingDrag!,
+      point = new THREE.Vector3();
+    this.setRay(event);
+    if (!this.ray.ray.intersectPlane(d.plane, point)) return;
+    const delta = point.sub(d.start).dot(d.axis),
+      original = d.original.openings.find((o) => o.id === d.openingId)!;
+    const offset = this.state?.snap
+      ? Math.round((original.offset + delta) * 10) / 10
+      : original.offset + delta;
+    d.changed ||= Math.abs(delta) > 0.001;
+    try {
+      const next = moveOpening(d.original, d.openingId, offset);
+      if (d.previewRoot) {
+        this.model.remove(d.previewRoot);
+        this.disposeGroup(d.previewRoot);
+      }
+      const root = this.roots.get(next.id);
+      if (root) root.visible = false;
+      d.previewRoot = this.createEntityRoot(
+        next,
+        this.state!.project.entities.map((e) => (e.id === next.id ? next : e)),
+      );
+      this.model.add(d.previewRoot);
+      this.model.updateMatrixWorld(true);
+      this.disposeGroup(this.overlay);
+      let target: THREE.Object3D = d.previewRoot;
+      d.previewRoot.traverse((node) => {
+        if (node.userData.opening === d.openingId) target = node;
+      });
+      this.box = new THREE.BoxHelper(target, 0x286548);
+      this.overlay.add(this.box);
+      d.preview = next;
+      d.error = "";
+      this.callbacks.hint(
+        `Отступ проёма: ${next.openings.find((o) => o.id === d.openingId)!.offset.toFixed(2)} м · Esc — отмена`,
+      );
+    } catch (error) {
+      d.error =
+        error instanceof Error ? error.message : "Проём не помещается в стене.";
+    }
+  }
+  private finishOpeningDrag(commit: boolean) {
+    const d = this.openingDrag;
+    if (!d) return;
+    this.openingDrag = null;
+    if (d.previewRoot) {
+      this.model.remove(d.previewRoot);
+      this.disposeGroup(d.previewRoot);
+    }
+    const root = this.roots.get(d.original.id);
+    if (root) root.visible = true;
+    if (this.renderer.domElement.hasPointerCapture(d.pointer))
+      this.renderer.domElement.releasePointerCapture(d.pointer);
+    this.orbit.enabled = true;
+    this.renderer.domElement.style.cursor = "default";
+    this.callbacks.hint("");
+    this.drawSelection();
+    if (commit && d.changed) {
+      if (d.error) this.callbacks.error(d.error);
+      else this.callbacks.edit(d.preview);
     }
   }
   private drawResizeHandles(e: Entity) {
@@ -1260,8 +1519,14 @@ export class GardenScene {
         return;
       }
     }
-    if (this.state.view === "plan" && this.state.tool === "select") {
+    if (this.state.tool === "select") {
       const hit = this.hit(event);
+      if (hit?.opening && isWall(hit.entity)) {
+        this.callbacks.select(hit.opening);
+        this.beginOpeningDrag(event, hit.entity, hit.opening, hit.point);
+        return;
+      }
+      if (this.state.view !== "plan") return;
       if (hit) {
         this.callbacks.select(hit.opening ?? hit.entity.id);
         if (!hit.opening) this.startDrag(event, hit.entity, "entity");
@@ -1291,6 +1556,10 @@ export class GardenScene {
     this.renderer.domElement.setPointerCapture(event.pointerId);
   }
   private onMove = (event: PointerEvent) => {
+    if (this.openingDrag) {
+      this.moveOpeningDrag(event);
+      return;
+    }
     if (this.resizeDrag) {
       this.moveResize(event);
       return;
@@ -1345,6 +1614,10 @@ export class GardenScene {
   };
   private onUp = (event: PointerEvent) => {
     if (event.button !== 0) return;
+    if (this.openingDrag) {
+      this.finishOpeningDrag(true);
+      return;
+    }
     if (this.resizeDrag) {
       this.finishResize(true);
       return;
@@ -1443,6 +1716,7 @@ export class GardenScene {
     if (p) this.callbacks.place(p, tool);
   };
   private onCancel = () => {
+    this.finishOpeningDrag(false);
     if (this.resizeDrag) this.finishResize(false);
     if (this.drag) {
       const d = this.drag;
@@ -1591,6 +1865,7 @@ export class GardenScene {
     });
   }
   destroy() {
+    this.finishOpeningDrag(false);
     this.finishResize(false);
     this.disposed = true;
     cancelAnimationFrame(this.animation);

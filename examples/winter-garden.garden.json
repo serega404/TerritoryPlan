@@ -836,309 +836,37 @@
       "thickness": 0.22
     },
     {
-      "id": "8901f441-37be-48a4-b6a5-6ac341a6f570",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 1",
-      "color": "#376243",
+      "id": "e2ea14d1-6774-48bf-9e36-416e977068a1",
+      "type": "spruce",
+      "name": "Левая зелёная зона · большая ель",
+      "color": "#315e43",
       "position": {
-        "x": 14.1,
-        "y": 7.4,
+        "x": -13.461111111111112,
+        "y": 8.583333333333332,
         "z": 0.22
       },
       "rotation": 0,
       "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
+      "width": 2.8,
+      "depth": 2.8,
+      "height": 5,
       "steps": 8
     },
     {
-      "id": "2dbcd6b2-620f-4880-89ef-47164ba174b7",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 2",
-      "color": "#4f7747",
+      "id": "0a3a9d7b-e5cd-4c49-ac38-256b9af4c951",
+      "type": "spruce",
+      "name": "Левая зелёная зона · малая ель",
+      "color": "#315e43",
       "position": {
-        "x": 12.5,
-        "y": 7.8,
+        "x": -11.061111111111112,
+        "y": 11.083333333333332,
         "z": 0.22
       },
-      "rotation": 0,
+      "rotation": 23,
       "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "68fa1791-8f72-433e-928f-458d97f847cb",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 3",
-      "color": "#68874b",
-      "position": {
-        "x": 14,
-        "y": 9,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
-      "steps": 8
-    },
-    {
-      "id": "cf1d83c4-849d-4659-8efc-46a7bac4bc3e",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 4",
-      "color": "#2e644b",
-      "position": {
-        "x": 12.4,
-        "y": 9.4,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
-      "steps": 8
-    },
-    {
-      "id": "ad4c77c3-59b9-459d-bf39-4c09e56ed18c",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 5",
-      "color": "#376243",
-      "position": {
-        "x": 10.8,
-        "y": 9.7,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "f98c0277-3507-4820-8dee-c3bd3dfa3b2e",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 6",
-      "color": "#4f7747",
-      "position": {
-        "x": 14,
-        "y": 11.4,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
-      "steps": 8
-    },
-    {
-      "id": "9f35c893-0cc8-4187-bcba-05af7b0f7bd6",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 7",
-      "color": "#68874b",
-      "position": {
-        "x": 12.4,
-        "y": 11.5,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
-      "steps": 8
-    },
-    {
-      "id": "7c43b2b9-7b50-4220-960c-6ccd2467949a",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 8",
-      "color": "#2e644b",
-      "position": {
-        "x": 10.7,
-        "y": 11.5,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "859d8a18-c991-4a9d-9b37-644fb1df32ed",
-      "type": "plant",
-      "name": "Правая зелёная зона · растение 9",
-      "color": "#376243",
-      "position": {
-        "x": 9,
-        "y": 11.7,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
-      "steps": 8
-    },
-    {
-      "id": "daa7e994-84cc-4cd9-886d-e2f0b20b3c64",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 1",
-      "color": "#376243",
-      "position": {
-        "x": -14.1,
-        "y": 7.4,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
-      "steps": 8
-    },
-    {
-      "id": "692db1fa-032a-4cb4-853c-b45ec6497f8c",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 2",
-      "color": "#4f7747",
-      "position": {
-        "x": -12.5,
-        "y": 7.8,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "e884c9e4-0760-42b3-bca9-cc810ff12329",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 3",
-      "color": "#68874b",
-      "position": {
-        "x": -14,
-        "y": 9,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
-      "steps": 8
-    },
-    {
-      "id": "6d017431-ad84-4469-95db-e1a6ae847524",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 4",
-      "color": "#2e644b",
-      "position": {
-        "x": -12.4,
-        "y": 9.4,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
-      "steps": 8
-    },
-    {
-      "id": "b7a43238-0ed2-4bb4-94da-85afae3da7b9",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 5",
-      "color": "#376243",
-      "position": {
-        "x": -10.8,
-        "y": 9.7,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "c2ab6dc1-d892-4495-8103-6cabd598871e",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 6",
-      "color": "#4f7747",
-      "position": {
-        "x": -14,
-        "y": 11.4,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
-      "steps": 8
-    },
-    {
-      "id": "4e86caa8-d1f4-4e72-91ad-b37a490e62a3",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 7",
-      "color": "#68874b",
-      "position": {
-        "x": -12.4,
-        "y": 11.5,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.25,
-      "steps": 8
-    },
-    {
-      "id": "5ff39719-dd9f-4a10-abdc-51886da5d414",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 8",
-      "color": "#2e644b",
-      "position": {
-        "x": -10.7,
-        "y": 11.5,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 1.9,
-      "steps": 8
-    },
-    {
-      "id": "63f51368-61f9-4d0e-8250-871dfb1856a0",
-      "type": "plant",
-      "name": "Левая зелёная зона · растение 9",
-      "color": "#376243",
-      "position": {
-        "x": -9,
-        "y": 11.7,
-        "z": 0.22
-      },
-      "rotation": 0,
-      "hidden": false,
-      "width": 1.35,
-      "depth": 1.35,
-      "height": 2.55,
+      "width": 2.3,
+      "depth": 2.3,
+      "height": 4,
       "steps": 8
     },
     {
@@ -1827,9 +1555,7 @@
       ],
       "thickness": 0.3,
       "height": 4.800000000000001,
-      "segmentIds": [
-        "9c74a6cf-2e04-4434-953d-a96339881ee2"
-      ],
+      "segmentIds": ["9c74a6cf-2e04-4434-953d-a96339881ee2"],
       "openings": [
         {
           "id": "eb0a06ee-b038-4c32-8bfd-725645696c65",
@@ -1898,9 +1624,7 @@
       ],
       "thickness": 0.3,
       "height": 3.2,
-      "segmentIds": [
-        "7baea5c2-9017-4014-b1ee-495430c44726"
-      ],
+      "segmentIds": ["7baea5c2-9017-4014-b1ee-495430c44726"],
       "openings": [
         {
           "id": "1f6285b7-7e07-4f02-b224-4e0e61a54077",
@@ -1938,9 +1662,7 @@
       ],
       "thickness": 0.3,
       "height": 3.2,
-      "segmentIds": [
-        "cfd4b6a0-db3b-41bf-b315-b53569cb5391"
-      ],
+      "segmentIds": ["cfd4b6a0-db3b-41bf-b315-b53569cb5391"],
       "openings": [
         {
           "id": "49f5218e-c602-452a-ad94-387a3d20492b",
@@ -2008,9 +1730,7 @@
       ],
       "thickness": 0.3,
       "height": 3.2,
-      "segmentIds": [
-        "b8706777-a522-4d51-ad04-bfea973b67da"
-      ],
+      "segmentIds": ["b8706777-a522-4d51-ad04-bfea973b67da"],
       "openings": [
         {
           "id": "98dbf94c-72ee-4937-a2ff-97eb2788a579",
@@ -2048,9 +1768,7 @@
       ],
       "thickness": 0.3,
       "height": 3.2,
-      "segmentIds": [
-        "ba7fb7ba-279f-464c-81c1-e2520c057122"
-      ],
+      "segmentIds": ["ba7fb7ba-279f-464c-81c1-e2520c057122"],
       "openings": [
         {
           "id": "a4968cb2-aa0c-45e5-a4a6-457328f0f51f",
@@ -2088,9 +1806,7 @@
       ],
       "thickness": 0.3,
       "height": 4.800000000000001,
-      "segmentIds": [
-        "ade3fabc-d7d9-4bd4-a6d8-ab4a1f068875"
-      ],
+      "segmentIds": ["ade3fabc-d7d9-4bd4-a6d8-ab4a1f068875"],
       "openings": [],
       "floorGroup": "gallery"
     },
@@ -2118,9 +1834,7 @@
       ],
       "thickness": 0.3,
       "height": 4.800000000000001,
-      "segmentIds": [
-        "f7a61c29-4b8b-44a6-bc4b-32e2f824c079"
-      ],
+      "segmentIds": ["f7a61c29-4b8b-44a6-bc4b-32e2f824c079"],
       "openings": [
         {
           "id": "296655c5-6768-4304-8879-fc6bca19afc6",
@@ -2169,9 +1883,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "a3d63c2f-b5f3-4700-8f44-e33f180540e0"
-      ],
+      "segmentIds": ["a3d63c2f-b5f3-4700-8f44-e33f180540e0"],
       "openings": []
     },
     {
@@ -2198,9 +1910,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "5fa74450-57f7-47ef-ad31-571153fb543b"
-      ],
+      "segmentIds": ["5fa74450-57f7-47ef-ad31-571153fb543b"],
       "openings": []
     },
     {
@@ -2227,9 +1937,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "369dcffa-2981-4cfe-b085-2168c79056b8"
-      ],
+      "segmentIds": ["369dcffa-2981-4cfe-b085-2168c79056b8"],
       "openings": []
     },
     {
@@ -2256,9 +1964,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "98cb90b8-4937-4a5b-8bd3-2c45fb0e7407"
-      ],
+      "segmentIds": ["98cb90b8-4937-4a5b-8bd3-2c45fb0e7407"],
       "openings": []
     },
     {
@@ -2285,9 +1991,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "be22220b-8d21-4090-a2f7-78842baa3e7b"
-      ],
+      "segmentIds": ["be22220b-8d21-4090-a2f7-78842baa3e7b"],
       "openings": []
     },
     {
@@ -2314,9 +2018,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "25a8082e-59e9-4c0a-b408-52c5ca61bc29"
-      ],
+      "segmentIds": ["25a8082e-59e9-4c0a-b408-52c5ca61bc29"],
       "openings": []
     },
     {
@@ -2343,9 +2045,7 @@
       ],
       "thickness": 0.13,
       "height": 0.38,
-      "segmentIds": [
-        "d40d7c44-5345-46bc-a742-4c28d6801758"
-      ],
+      "segmentIds": ["d40d7c44-5345-46bc-a742-4c28d6801758"],
       "openings": []
     },
     {
@@ -2865,9 +2565,7 @@
       ],
       "thickness": 0.18,
       "height": 4.300000000000001,
-      "segmentIds": [
-        "783f5095-2a76-427a-9282-38e2fa629a69"
-      ],
+      "segmentIds": ["783f5095-2a76-427a-9282-38e2fa629a69"],
       "openings": [],
       "floorGroup": "gallery"
     },
@@ -2895,9 +2593,7 @@
       ],
       "thickness": 0.18,
       "height": 4.300000000000001,
-      "segmentIds": [
-        "34e91ea5-3b24-4ec3-8790-41f0d5e21344"
-      ],
+      "segmentIds": ["34e91ea5-3b24-4ec3-8790-41f0d5e21344"],
       "openings": [
         {
           "id": "a9bede86-f038-4789-906f-e12787672fb2",
@@ -3597,10 +3293,29 @@
       "depth": 0.8,
       "height": 0.95,
       "steps": 8
+    },
+    {
+      "id": "2dd5ae79-73fa-4ea3-9136-30e343e99958",
+      "type": "palm",
+      "name": "Правая зелёная зона · большая пальма",
+      "color": "#3f7547",
+      "position": {
+        "x": 12.211111111111112,
+        "y": 9.933333333333332,
+        "z": 0.22
+      },
+      "rotation": 0,
+      "hidden": false,
+      "width": 5,
+      "depth": 5,
+      "height": 6.5,
+      "steps": 8
     }
   ],
   "appliedFixes": [
     "ground-perimeter-v1",
-    "square-columns-north-sofas-v1"
+    "square-columns-north-sofas-v1",
+    "right-green-zone-palm-v1",
+    "left-green-zone-spruces-v1"
   ]
 }

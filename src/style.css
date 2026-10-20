@@ -1384,3 +1384,14 @@ code {
     display: none;
   }
 }
+
+.opening-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+}
+.opening-actions .button {
+  justify-content: flex-start;
+  border: 1px solid var(--line);
+}

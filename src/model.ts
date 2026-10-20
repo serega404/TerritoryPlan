@@ -23,6 +23,8 @@ export type Opening = {
   width: number;
   height: number;
   sill: number;
+  hinge?: "left" | "right";
+  swing?: 1 | -1;
 };
 export type Wall = Base & {
   type: "wall";
@@ -37,6 +39,8 @@ export type SolidKind =
   | "column"
   | "bed"
   | "plant"
+  | "palm"
+  | "spruce"
   | "podium"
   | "table"
   | "chair"
@@ -195,6 +199,10 @@ export function validateWall(wall: Wall) {
     number(o.width, "Ширина проёма", 0.05, 1000);
     number(o.height, "Высота проёма", 0.05, 1000);
     number(o.sill, "Подоконник", 0, 1000);
+    if (o.hinge !== undefined && o.hinge !== "left" && o.hinge !== "right")
+      fail("Неверная сторона петель.");
+    if (o.swing !== undefined && o.swing !== 1 && o.swing !== -1)
+      fail("Неверная сторона открывания.");
     if (
       o.offset + o.width >
         distance(wall.points[i], wall.points[i + 1]) + 1e-7 ||
@@ -223,6 +231,8 @@ const kinds = [
   "column",
   "bed",
   "plant",
+  "palm",
+  "spruce",
   "podium",
   "table",
   "chair",
@@ -343,6 +353,8 @@ export function parseProject(raw: string): Project {
             width: o.width,
             height: o.height,
             sill: o.sill,
+            ...(o.hinge === undefined ? {} : { hinge: o.hinge }),
+            ...(o.swing === undefined ? {} : { swing: o.swing }),
           })),
         };
       return {
@@ -364,6 +376,8 @@ export const labels: Record<Entity["type"], string> = {
   column: "Колонна",
   bed: "Клумба",
   plant: "Растение",
+  palm: "Пальма",
+  spruce: "Ель",
   podium: "Подиум",
   table: "Стол",
   chair: "Стул",
@@ -419,6 +433,8 @@ export function makeSolid(type: SolidKind, x = 0, y = 0, z = 0): Solid {
     column: [0.6, 0.6, 7.4, "#9daba3"],
     bed: [4, 4, 0.65, "#65866a"],
     plant: [1.5, 1.5, 2.5, "#39674a"],
+    palm: [5, 5, 6.5, "#3f7547"],
+    spruce: [2.8, 2.8, 5, "#315e43"],
     podium: [4, 4, 0.6, "#c8a980"],
     table: [1.8, 0.9, 0.75, "#b89c77"],
     chair: [0.55, 0.55, 0.85, "#ac9274"],
@@ -1226,7 +1242,7 @@ export function applyGardenPerimeterFix(project: Project): Project {
 }
 
 /** Replace the northern planters with seating once; later user edits stay intact. */
-export function applyGardenUpdates(project: Project): Project {
+function applyGardenSeating(project: Project): Project {
   const current = applyGardenPerimeterFix(project);
   const fix = "square-columns-north-sofas-v1";
   if (current.appliedFixes?.includes(fix)) return current;
@@ -1253,6 +1269,69 @@ export function applyGardenUpdates(project: Project): Project {
   });
   next.appliedFixes = [...(next.appliedFixes ?? []), fix];
   return encloseRaisedPlatforms(next);
+}
+
+/** Replace only the right corner planting once, preserving later manual edits. */
+function applyGardenPalm(project: Project): Project {
+  const current = applyGardenSeating(project);
+  const fix = "right-green-zone-palm-v1";
+  if (current.appliedFixes?.includes(fix)) return current;
+  const zone = current.entities.find(
+    (e) => e.name === "Правая зелёная зона" && isSurface(e),
+  );
+  if (!zone || !isSurface(zone)) return current;
+  const plants = current.entities.filter(
+    (e) =>
+      e.type === "plant" && e.name.startsWith("Правая зелёная зона · растение"),
+  );
+  if (!plants.length) return current;
+  const next = clone(current);
+  const removed = new Set(plants.map((e) => e.id));
+  const palm = makeSolid("palm", 0, 0, zone.position.z);
+  // The original planting centres define a safe position inside the corner bed.
+  palm.position.x =
+    plants.reduce((sum, e) => sum + e.position.x, 0) / plants.length;
+  palm.position.y =
+    plants.reduce((sum, e) => sum + e.position.y, 0) / plants.length;
+  palm.name = "Правая зелёная зона · большая пальма";
+  next.entities = next.entities.flatMap((e) =>
+    e.id === plants[0].id ? [palm] : removed.has(e.id) ? [] : [e],
+  );
+  next.appliedFixes = [...(next.appliedFixes ?? []), fix];
+  return next;
+}
+
+/** Replace the left corner planting once; each tree remains individually editable. */
+export function applyGardenUpdates(project: Project): Project {
+  const current = applyGardenPalm(project),
+    fix = "left-green-zone-spruces-v1";
+  if (current.appliedFixes?.includes(fix)) return current;
+  const zone = current.entities.find(
+    (e) => e.name === "Левая зелёная зона" && isSurface(e),
+  );
+  const plants = current.entities.filter(
+    (e) =>
+      e.type === "plant" && e.name.startsWith("Левая зелёная зона · растение"),
+  );
+  if (!zone || !plants.length) return current;
+  const next = clone(current),
+    removed = new Set(plants.map((e) => e.id));
+  const centre = {
+    x: plants.reduce((s, e) => s + e.position.x, 0) / plants.length,
+    y: plants.reduce((s, e) => s + e.position.y, 0) / plants.length,
+  };
+  const trees = [
+    makeSolid("spruce", centre.x - 1.25, centre.y - 1.35, zone.position.z),
+    makeSolid("spruce", centre.x + 1.15, centre.y + 1.15, zone.position.z),
+  ];
+  trees[0].name = "Левая зелёная зона · большая ель";
+  trees[1].name = "Левая зелёная зона · малая ель";
+  Object.assign(trees[1], { width: 2.3, depth: 2.3, height: 4, rotation: 23 });
+  next.entities = next.entities.flatMap((e) =>
+    e.id === plants[0].id ? trees : removed.has(e.id) ? [] : [e],
+  );
+  next.appliedFixes = [...(next.appliedFixes ?? []), fix];
+  return next;
 }
 
 /** Keep the 25 m balcony above both the left gallery and its northern junction. */
@@ -1570,6 +1649,34 @@ export function duplicate(e: Entity): Entity {
     }));
   }
   return n;
+}
+
+/** Move an opening along its wall segment, keeping it inside and rejecting overlaps. */
+export function moveOpening(
+  wall: Wall,
+  openingId: string,
+  offset: number,
+): Wall {
+  const next = clone(wall),
+    o = next.openings.find((o) => o.id === openingId);
+  if (!o) throw new Error("Проём не найден.");
+  const index = next.segmentIds.indexOf(o.segmentId);
+  o.offset = Math.max(
+    0,
+    Math.min(
+      distance(next.points[index], next.points[index + 1]) - o.width,
+      offset,
+    ),
+  );
+  validateWall(next);
+  return next;
+}
+export function doorSwing(o: Opening) {
+  return {
+    hinge: o.offset + (o.hinge === "right" ? o.width : 0),
+    along: o.hinge === "right" ? -1 : 1,
+    side: o.swing ?? 1,
+  };
 }
 
 /** Footprint of a wall panel in segment coordinates. Miters close endpoint corners;

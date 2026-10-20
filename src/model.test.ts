@@ -19,6 +19,8 @@ import {
   makeSolid,
   makeSurface,
   makeWall,
+  moveOpening,
+  doorSwing,
   parseProject,
   resized,
   resizeBounds,
@@ -42,6 +44,58 @@ const polygon = [
   { x: 2, y: 6 },
   { x: 0, y: 6 },
 ];
+describe("перемещение и открывание двери", () => {
+  const wall = makeWall([
+    { x: 0, y: 0 },
+    { x: 10, y: 0 },
+  ]);
+  wall.rotation = 37;
+  wall.openings = [
+    {
+      id: "door",
+      segmentId: wall.segmentIds[0],
+      name: "Дверь",
+      type: "door",
+      offset: 2,
+      width: 1,
+      height: 2,
+      sill: 0,
+    },
+  ];
+  it("двигает только проём, ограничивает концами сегмента и отклоняет пересечение", () => {
+    expect(moveOpening(wall, "door", 5).openings[0].offset).toBe(5);
+    expect(moveOpening(wall, "door", -4).openings[0].offset).toBe(0);
+    expect(moveOpening(wall, "door", 20).openings[0].offset).toBe(9);
+    expect(wall.openings[0].offset).toBe(2);
+    const next = clone(wall);
+    next.openings.push({ ...next.openings[0], id: "other", offset: 6 });
+    expect(() => moveOpening(next, "door", 6)).toThrow();
+    expect(moveOpening(wall, "door", 5).points).toEqual(wall.points);
+  });
+  it("сохраняет четыре варианта открывания при записи и чтении проекта", () => {
+    for (const hinge of ["left", "right"] as const)
+      for (const swing of [1, -1] as const) {
+        const next = clone(wall);
+        Object.assign(next.openings[0], { hinge, swing });
+        expect(doorSwing(next.openings[0])).toEqual({
+          hinge: hinge === "left" ? 2 : 3,
+          along: hinge === "left" ? 1 : -1,
+          side: swing,
+        });
+        const project: Project = {
+          version: 1,
+          name: "Двери",
+          entities: [next],
+        };
+        expect(parseProject(JSON.stringify(project))).toEqual(project);
+      }
+    expect(doorSwing(wall.openings[0])).toEqual({
+      hinge: 2,
+      along: 1,
+      side: 1,
+    });
+  });
+});
 describe("изменение размера за грани", () => {
   it("растягивает повёрнутый объект, удерживая противоположную грань", () => {
     const e = makeSolid("box", 3, 5);
@@ -146,6 +200,48 @@ describe("изменение размера за грани", () => {
   });
 });
 describe("квадратные колонны и диваны", () => {
+  it("заменяет правые угловые растения одной редактируемой пальмой без повторного сброса", () => {
+    const project = initialProject();
+    const palm = project.entities.find((e) => e.type === "palm");
+    expect(palm).toMatchObject({
+      name: "Правая зелёная зона · большая пальма",
+      height: 6.5,
+      width: 5,
+      position: { z: 0.22 },
+    });
+    expect(project.entities.filter((e) => e.type === "palm")).toHaveLength(1);
+    expect(
+      project.entities.filter(
+        (e) =>
+          e.type === "plant" &&
+          e.name.startsWith("Правая зелёная зона · растение"),
+      ),
+    ).toHaveLength(0);
+    expect(
+      project.entities.filter(
+        (e) =>
+          e.type === "plant" &&
+          e.name.startsWith("Левая зелёная зона · растение"),
+      ),
+    ).toHaveLength(0);
+    const trees = project.entities.filter((e) => e.type === "spruce");
+    expect(trees).toHaveLength(2);
+    expect(trees.map((e) => e.height)).toEqual([5, 4]);
+    trees[0].position.x += 0.7;
+    trees[0].height = 4.6;
+    expect(project.entities.some((e) => e.name === "Правая зелёная зона")).toBe(
+      true,
+    );
+    if (!palm || palm.type !== "palm") throw new Error("palm");
+    palm.height = 5.7;
+    palm.position.x += 0.5;
+    expect(applyGardenUpdates(project)).toBe(project);
+    expect(parseProject(JSON.stringify(project))).toEqual(project);
+    expect(
+      applyGardenUpdates({ version: 1, name: "Другой проект", entities: [] })
+        .entities,
+    ).toEqual([]);
+  });
   it("заменяет только северное озеленение, оставляет лестницы свободными и сохраняется в JSON", () => {
     const doc = initialProject();
     const sofas = doc.entities.filter((e) => e.type === "sofa");

@@ -27,6 +27,7 @@ import {
   Plus,
   Redo2,
   RotateCw,
+  FlipHorizontal2,
   Settings2,
   Sprout,
   Square,
@@ -129,6 +130,8 @@ const typeIcons: Record<string, typeof Box> = {
   column: Columns3,
   bed: Leaf,
   plant: Sprout,
+  palm: Sprout,
+  spruce: Sprout,
   podium: Circle,
   table: Table2,
   chair: Box,
@@ -425,6 +428,38 @@ function Inspector({
         <p className="inspector-note">
           Проём проходит сквозь стену. Отступ и высота отсчитываются от начала
           сегмента и основания стены.
+        </p>
+        {opening.type === "door" && (
+          <div className="opening-actions">
+            <Button
+              title="Развернуть открывание"
+              onClick={() =>
+                editOpening({
+                  ...opening,
+                  swing: opening.swing === -1 ? 1 : -1,
+                })
+              }
+            >
+              <RotateCw size={15} />
+              Развернуть открывание
+            </Button>
+            <Button
+              title="Сменить петли"
+              onClick={() =>
+                editOpening({
+                  ...opening,
+                  hinge: opening.hinge === "right" ? "left" : "right",
+                })
+              }
+            >
+              <FlipHorizontal2 size={15} />
+              Петли: {opening.hinge === "right" ? "справа" : "слева"}
+            </Button>
+          </div>
+        )}
+        <p className="inspector-note">
+          Тяните рамку{opening.type === "door" ? " или створку" : ""} мышью
+          вдоль стены. Esc отменяет перетаскивание.
         </p>
         <button className="danger-text" onClick={remove}>
           <Trash2 size={15} /> Удалить проём
@@ -1491,6 +1526,8 @@ export function App() {
                   "column",
                   "bed",
                   "plant",
+                  "palm",
+                  "spruce",
                   "podium",
                   "table",
                   "chair",
